@@ -35,6 +35,40 @@ export const hero = {
   trust: "We never post as you. · Free plan · No X password",
 } as const;
 
+/** Hero graphic: a mocked X post, drawn entirely in code. Numbers are illustrative. */
+export const heroTweet = {
+  name: "replylane",
+  handle: "@replylane",
+  verified: true,
+  time: "9:41 AM",
+  date: "Jun 4, 2026",
+  lines: [
+    "Day 214 of building in public.",
+    "Shipped a feature nobody asked for. Deleted it. Shipped the one three people asked for in a reply I almost missed.",
+  ],
+  mentionBefore: "Every paying customer this month came from a thread we answered, not a thing we published. The desk is ",
+  mention: "@replylane",
+  mentionAfter: ", and it stays off the account.",
+  tags: ["#buildinpublic", "#indiehackers", "#saas"] as const,
+  stats: {
+    replies: "218",
+    reposts: "146",
+    likes: "1,204",
+    views: "24.8K",
+  },
+  counts: [
+    { value: "146", label: "Reposts" },
+    { value: "41", label: "Quotes" },
+    { value: "1,204", label: "Likes" },
+    { value: "96", label: "Bookmarks" },
+  ],
+  note: {
+    label: "replylane",
+    text: "This post is being read by people who are likely to become your customers. Reply to this one.",
+  },
+  caption: "A mockup. Drawn in code, not a screenshot.",
+} as const;
+
 export const desk = {
   id: "desk",
   h2: "A feed has no bottom. A desk does.",

@@ -88,7 +88,7 @@ export const frames = {
       mark: true,
       size: "side" as const,
       lines: ["A desk for", "public intent"],
-      body: "Asks and still-open threads, scored for what you sell.",
+      body: "Asks and still-open threads. Scored for what you sell.",
       foot: "replylane.app",
       frame:
         "replylane finds the X conversations that can become customers · You answer them",
@@ -110,7 +110,7 @@ export const frames = {
       mark: true,
       size: "side" as const,
       lines: ["You answer", "them"],
-      body: "Fewer cards, better ones, and a human hits send.",
+      body: "Fewer cards, better ones. A human hits send.",
       foot: null,
       frame:
         "You answer them · replylane finds the X conversations that can become customers",

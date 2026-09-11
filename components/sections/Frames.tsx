@@ -36,7 +36,7 @@ export function Frames() {
                 ))}
               </h2>
               {panel.body ? (
-                <p className="mt-4 max-w-[18rem] font-body text-[15px] leading-[22px] opacity-70">
+                <p className="mt-4 max-w-[20rem] font-body text-[15px] leading-[22px] opacity-70">
                   {panel.body}
                 </p>
               ) : null}

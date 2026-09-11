@@ -40,7 +40,7 @@ export function PosterFrame({ sentence, fill, outline, children }: Props) {
 
   return (
     <article
-      className={`relative flex h-full min-h-[20rem] flex-col overflow-hidden md:min-h-[28rem] ${fillClass[fill]}`}
+      className={`relative flex h-full min-h-[20rem] flex-col overflow-hidden md:min-h-[30rem] ${fillClass[fill]}`}
     >
       <div
         className={`pointer-events-none absolute inset-0 ${color} opacity-45 shadow-[inset_0_0_0_1px_currentColor]`}

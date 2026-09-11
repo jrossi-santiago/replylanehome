@@ -7,32 +7,32 @@ export const urls = {
 } as const;
 
 export const meta = {
-  title: "replylane — A desk for public intent",
+  title: "replylane — reply on X where your customers already are",
   description:
-    "Finds the X conversations that can become customers. You answer them. We never post as you.",
+    "replylane finds the X posts worth replying to: people asking for what you sell, and posts from the accounts you follow. You write the reply. We never post for you.",
 } as const;
 
 export const nav = {
   links: [
     { label: "How it works", href: "#how" },
-    { label: "The desk", href: "#desk" },
-    { label: "The Circle", href: "#circle" },
+    { label: "What you get", href: "#desk" },
+    { label: "Who you follow", href: "#follow" },
     { label: "Pricing", href: "#pricing" },
   ],
-  cta: "Start a desk",
+  cta: "Start free",
   menu: "Menu",
   close: "Close",
 } as const;
 
 export const hero = {
-  eyebrow: "A reply desk for X",
-  h1Before: "replylane finds the X conversations that can become customers. ",
-  h1Accent: "You answer them.",
+  eyebrow: "A reply list for X",
+  h1Before: "Reply on X where your customers already are. ",
+  h1Accent: "We find the posts. You write the reply.",
   subline:
-    "A desk for public intent. Asks and still-open threads, scored for what you sell.",
-  primary: "Start a desk",
-  secondary: "See the desk",
-  trust: "We never post as you. · Free plan · No X password",
+    "replylane checks X for posts worth answering: people asking for what you sell, and posts from the accounts you follow. You get a short list, once you press the button.",
+  primary: "Start free",
+  secondary: "See what you get",
+  trust: "We never post for you. · Free plan · No X password",
 } as const;
 
 /** Hero graphic: a mocked X post, drawn entirely in code. Numbers are illustrative. */
@@ -46,9 +46,9 @@ export const heroTweet = {
     "Day 214 of building in public.",
     "Shipped a feature nobody asked for. Deleted it. Shipped the one three people asked for in a reply I almost missed.",
   ],
-  mentionBefore: "Every paying customer this month came from a thread we answered, not a thing we published. The desk is ",
+  mentionBefore: "Every customer we got this month came from a post we replied to, not a post we wrote. The tool we use is ",
   mention: "@replylane",
-  mentionAfter: ", and it stays off the account.",
+  mentionAfter: ", and it never posts for us.",
   tags: ["#buildinpublic", "#indiehackers", "#saas"] as const,
   stats: {
     replies: "218",
@@ -64,19 +64,89 @@ export const heroTweet = {
   ],
   note: {
     label: "replylane",
-    text: "This post is being read by people who are likely to become your customers. Reply to this one.",
+    text: "The people reading this post are the kind of people who buy from you. Reply to this one.",
   },
-  caption: "A mockup. Drawn in code, not a screenshot.",
+  caption: "A made-up example. Drawn in code, not a screenshot.",
+} as const;
+
+/** Split card: the plain promise, right after the hero. */
+export const promise = {
+  h2Lines: ["You reply.", "We do the", "looking."] as const,
+  body:
+    "A lot of buying talk happens on X, and it moves fast. Good posts go by before you ever see them. replylane looks for the ones that matter to you and puts them on one page. Nothing goes out without you.",
+  caption: "Public posts. Read only.",
+} as const;
+
+export const story = {
+  label: "The problem",
+  h2: "The feed is a bad place to find work.",
+  paragraphs: [
+    {
+      parts: [
+        { text: "You already use X to find work. The problem is that " },
+        { text: "the feed decides what you see, and when you see it.", mark: true },
+      ],
+    },
+    {
+      parts: [
+        { text: "Someone asks for help at 9 in the morning. It reaches you at 4 in the afternoon, under forty other replies. " },
+        { text: "The person who answered at 9:20 got the job.", mark: true },
+      ],
+    },
+    {
+      parts: [
+        { text: "Then there are the hundred or so accounts whose followers are your buyers. You mean to stay visible to them. One busy week and you go quiet. " },
+        { text: "Nobody tells you. You just stop coming up.", mark: true },
+      ],
+    },
+  ],
+  close:
+    "The tools built to fix this made it worse. Auto-repliers and like-for-like pods taught everyone to ignore strangers. replylane does the opposite: fewer posts, better ones, and a person writes the reply.",
+} as const;
+
+export const lists = {
+  h2: "What's on your page each day.",
+  lead: "Three lists. That's the whole product.",
+  rows: [
+    {
+      n: "01",
+      icon: "ask" as IconName,
+      title: "People asking for what you sell",
+      body:
+        "We search all of X for posts like \"can anyone recommend\" or \"we're looking for\". These are rare. When one shows up, answering early matters more than anything else.",
+      appLabel: "Called Asks in the app",
+    },
+    {
+      n: "02",
+      icon: "room" as IconName,
+      title: "Posts from the accounts you follow",
+      body:
+        "New posts from the accounts you picked: buyers, people like you, and people your buyers listen to. A reply here gets read. Most days, this is where the work is.",
+      appLabel: "Called Room in the app",
+    },
+    {
+      n: "03",
+      icon: "saved" as IconName,
+      title: "Posts you kept",
+      body:
+        "Anything you save stays saved. It never runs out and it's never limited, on either plan. A keep list that expires isn't a keep list.",
+      appLabel: "Called Saved in the app",
+    },
+  ],
+  foot:
+    "Plenty of days the first list is empty. That's normal. The second list is why it's fine.",
 } as const;
 
 export const desk = {
   id: "desk",
-  h2: "A feed has no bottom. A desk does.",
+  h2: "One page. A few posts. Then you're done.",
+  lead:
+    "No endless scroll. You press the button, you get a handful of posts, and each one says why it's there.",
   title: "Reply Desk",
   tabs: ["Asks", "Room", "Saved"] as const,
   scan: "Scan now",
-  count: "3 cards",
-  caption: "You copy. You send. We stay off the account.",
+  count: "3 posts",
+  caption: "You copy the reply. You send it from your own account.",
 } as const;
 
 /** Hero desk sample cards. Draft length must equal computed character count. */
@@ -87,7 +157,7 @@ export const deskCards = {
     age: "14m ago",
     replies: "5 replies",
     followers: "2,140 followers",
-    why: "Asking for a cheaper status page tool, which is what you sell. Five replies so far.",
+    why: "Asking for a cheaper status page tool, which is what you sell. Only five replies so far.",
     post: "Is there a status page tool that isn't $99/mo? Two-person team. We just need incident updates and email subscribers, nothing else.",
     draft:
       "If it's only incidents and email subscribers, most of what those $99 plans charge for is stuff you won't touch. Worth trying a smaller tool first. I built one for exactly that setup and can share it if useful.",
@@ -99,7 +169,7 @@ export const deskCards = {
     label: "Room" as const,
     age: "41m ago",
     replies: "3 replies",
-    why: "Circle member writing about incident comms, a topic you sell into. 41m ago, 3 replies.",
+    why: "Someone you follow, writing about outages, which is what you sell into. 41m ago, 3 replies.",
     post: "Our first real outage last night. Wrote the postmortem before the fix was even deployed. Not sure that was smart.",
     open: false,
   },
@@ -108,7 +178,7 @@ export const deskCards = {
     label: "Room" as const,
     age: "22m ago",
     replies: "8 replies",
-    why: "Circle member talking changelogs with founders who ship weekly. 22m ago, 8 replies.",
+    why: "Someone you follow, talking changelogs with founders who ship weekly. 22m ago, 8 replies.",
     post: "Unpopular opinion: your changelog is a sales page and you're writing it like a git log.",
     open: false,
   },
@@ -116,71 +186,25 @@ export const deskCards = {
 
 export const askDraftLength = deskCards.ask.draft.length;
 
-export const argument = {
-  label: "The problem",
-  h2: "The feed is a terrible CRM.",
-  lead: "You already use X to find work. You just use the For You feed to do it, and the feed fails in two quiet ways.",
-  cards: [
-    {
-      h3: "The ask you saw at 4pm",
-      body: "Someone asks for a recommendation at 9:14. It reaches your feed at 4pm, forty replies deep. The person who answered at 9:20 is the one who gets the DM.",
-      sting: "You're late because you scroll, not because you don't care.",
-    },
-    {
-      h3: "The people you meant to keep up with",
-      body: "There are about a hundred accounts whose audiences overlap your buyers. You mean to stay visible to them. Then a client week flattens you, and nobody notices you're gone, including you.",
-      quote: 'Two weeks later a peer says, "Haven\'t seen you around."',
-      sting: "Neglect is silent until pipeline is.",
-    },
-  ],
-  close: [
-    "The tools that showed up to fix this made it worse. Auto-repliers and engagement pods taught the timeline to ignore strangers, which made the honest reply harder for everyone.",
-    "replylane is the opposite bet: fewer cards, better ones, and a human hits send.",
-  ],
-} as const;
-
-export const twoKinds = {
-  h2: "Two kinds of posts. That's the product.",
-  lanes: [
-    {
-      name: "Asks",
-      heading: "Asks — someone is asking to buy.",
-      body: "Keyword searches across all of X for people asking to hire or buy. This is revenue, when it happens. It doesn't happen often, so early matters more than anything else.",
-      analogy: "An ask is a raised hand in a crowded room. By reply sixty, it's down.",
-    },
-    {
-      name: "Room",
-      heading: "Room — a reply here would be seen.",
-      body: "Recent posts from your Circle, the accounts you chose. This is recognition, and it compounds. Most mornings, this is where the work is.",
-      analogy:
-        "Room replies work like being a regular. Nobody remembers the one night you came in. They notice when you stop.",
-    },
-  ],
-  footnote:
-    "Plenty of mornings the Asks lane is empty. The Room is why that's fine.",
-  saved:
-    "Saved is a filter across both, not a third pile. Saved cards never expire and are never capped on any plan. A keep-list that expires isn't a keep-list.",
-} as const;
-
 export const howItWorks = {
   id: "how",
-  h2: "Eight minutes. Then X.",
-  sub: "Three steps. The last one is yours.",
-  close: "The real work on X, without living there.",
+  h2: "Three steps. The last one is yours.",
+  sub: "About five minutes to set up. After that it's a button and a reply.",
+  close: "Then close the tab and get back to work.",
   steps: [
     {
       n: "1",
       icon: "brief" as IconName,
-      h3: "Brief",
-      kicker: "Two questions. That is the whole setup.",
+      h3: "Tell us what you do",
+      kicker: "Two questions, and that's the setup.",
       parts: [
         {
-          label: "What do you do?",
-          body: "Paste your website, a PDF or a Markdown brief. It fills in what you sell, who buys it and the keywords to watch. Anything it gets wrong, you fix in Settings.",
+          label: "What do you sell?",
+          body: "Paste your website, or upload a short PDF. We read it and fill in what you sell, who buys it, and what to search for. Anything we get wrong, you fix in settings.",
         },
         {
           label: "Who do you already read?",
-          body: "Paste five to ten X handles you trust. Each one is checked against a real profile. If one doesn't resolve, you see it on screen; nothing is dropped silently. These become the start of your Circle.",
+          body: "Paste five to ten X accounts you trust. We check each one against a real profile. If one doesn't exist, you see it on the screen. Nothing is dropped quietly.",
         },
       ],
       foot: "About five minutes.",
@@ -188,146 +212,155 @@ export const howItWorks = {
     {
       n: "2",
       icon: "scan" as IconName,
-      h3: "Scan",
-      kicker: "You press the button.",
-      body: "Press Scan now. One scan checks your keywords and your Circle, throws out the junk and lays what's left on the desk, each card with one sentence on why it's there.",
-      note: "Nothing runs when you're not looking. It's a light switch, not a motion sensor.",
+      h3: "Press the button",
+      kicker: "You decide when it looks.",
+      body: "Press Scan. It checks X once, throws out the junk, and puts what's left on one page. Each post comes with one sentence on why it's there.",
+      note: "Nothing runs while you're away. It's a light switch, not a motion sensor.",
     },
     {
       n: "3",
       icon: "reply" as IconName,
-      h3: "Reply",
-      kicker: "The part that's yours.",
-      body: "Open a card. On Pro, a draft is already written. Change what you want, copy it, open the post on X and send it from your own account. Mark it replied. Close the tab.",
+      h3: "Write the reply",
+      kicker: "This part is yours.",
+      body: "Open a post. On the paid plan a first draft is already written. Change what you want, copy it, open the post on X, and send it from your own account.",
+      foot: "Then mark it replied.",
     },
   ],
 } as const;
 
 export const whyOnDesk = {
-  h2: "Every card says why it's there.",
-  lead: "A score without a reason is decoration. So every card carries a why-line: one plain sentence, eighteen words at most, above the post.",
+  h2: "Every post says why it's there.",
+  lead:
+    "A score with no reason is just decoration. So every post comes with one plain sentence, 18 words at most, sitting right above it.",
   exampleWhy: deskCards.ask.why,
-  filtersTitle: "What gets thrown out before you see anything",
-  filtersLead: "Cheap rules run first, and they drop a lot:",
+  filtersTitle: "What we throw out before you see anything",
+  filtersLead: "Cheap checks run first, and they drop a lot:",
   cheapRules: [
-    "Accounts younger than 21 days",
-    "Follow-farm shapes",
+    "Accounts less than three weeks old",
+    "Accounts that look like follow farms",
     "Posts with almost no words in them",
-    'Giveaways, airdrops, "DM me for" and crypto signals',
-    "Authors you've hidden, and authors flooding the desk",
+    "Giveaways, crypto, airdrops and \"DM me for\" posts",
+    "Anyone you've hidden, and anyone flooding your page",
   ],
   asksBar: [
-    "Asks clear a stricter bar on top of that. A post older than 72 hours is out. A post with more than 60 replies is out, because the window is closed. An author with more than 250,000 followers is out: they get 400 replies, and they aren't buying.",
-    "Your Circle doesn't get those rules. Follower and reply ceilings exist to judge strangers. Applied to the accounts you chose, they'd throw out exactly the people you chose.",
+    "Posts where someone is asking to buy have to clear more than that. Older than three days: out. More than 60 replies: out, because the thread is already over. More than 250,000 followers: out, because they get 400 replies and they aren't buying.",
+    "The accounts you picked don't get those rules. Follower and reply limits are there to judge strangers. Used on the people you chose, they would throw out the exact people you chose.",
   ],
-  close: "A false positive costs you more than a miss. An empty desk is better than a noisy one.",
+  close:
+    "A bad post costs you more than a missed one. We'd rather show you an empty page than a noisy one.",
 } as const;
 
 export const theDraft = {
-  h2: "A first draft that follows the rules.",
-  lead: "It writes like a colleague who read the thread. You're the one who signs it.",
-  rulesTitle: "The rules",
+  h2: "A first draft you could actually send.",
+  lead: "It reads like a person who read the post. You're still the one who sends it.",
+  rulesTitle: "The rules it follows",
   rules: [
     "One to three sentences. Never a thread, never a list.",
-    'Never opens with a compliment. No "Great question." No "So true." No "This."',
-    "Never pitches in the first sentence. It answers the question or adds one concrete observation first.",
-    "Only an Ask can mention what you sell. A Room post is a conversation you're joining, and a pitch there is how people get muted.",
-    "No links, hashtags or emoji.",
-    "Never claims you used their product, met them or worked with them. Never invents a number or a client.",
-    "Sounds like your writing samples. With none, it writes plain and short instead of inventing a personality.",
-    "280 characters, counted on screen, not guessed.",
+    "Never opens with a compliment. No \"Great question.\" No \"So true.\"",
+    "Answers first. It never pitches in the first sentence.",
+    "Only mentions what you sell when someone is asking to buy. In every other post, a pitch is how you get muted.",
+    "No links, no hashtags, no emoji.",
+    "Never says you used their product, met them, or worked with them. Never makes up a number or a client.",
+    "Sounds like your own writing, if you give it samples. With none, it stays plain and short instead of inventing a voice.",
+    "280 characters, counted on the screen, not guessed.",
   ],
   compareTitle: "Same founder, two posts",
   compare: {
     ask: {
-      label: "Ask",
+      label: "Someone asking to buy",
       post: "Is there a status page tool that isn't $99/mo?",
       draft: deskCards.ask.draft,
-      note: "Mentions the product in sentence three.",
+      note: "Mentions the product in the third sentence.",
     },
     room: {
-      label: "Room",
+      label: "Someone you follow",
       post: "Our first real outage last night. Wrote the postmortem before the fix was even deployed.",
       draft:
         "Writing it before the fix shipped is the part people remember, even if the root cause changes later. An update line at the top covers you when it does.",
-      note: "Doesn't mention it at all.",
+      note: "Doesn't mention the product at all.",
     },
   },
   close: "There is no send button. There never will be.",
   planNote:
-    "Drafts are on Pro. On Free you get every card and every why-line, and you write the reply.",
+    "Drafts come with the paid plan. On the free plan you still get every post and every reason, and you write the reply yourself.",
 } as const;
 
 export const roomDraftLength = theDraft.compare.room.draft.length;
 
 export const rules = {
-  frame: "We never post as you.",
-  h2: "What replylane will not do.",
-  lead: "These are rules in the code, not settings.",
-  neverTitle: "Never",
+  frame: "We never post for you.",
+  h2Lines: ["We never", "post", "for you."] as const,
+  lead: "These are rules in the code, not settings you have to go and find.",
+  neverTitle: "We never",
   never: [
-    "Post, like, follow or DM for you. Not on a schedule, not ever.",
-    "Scan when you didn't press Scan.",
+    "Post, like, follow or message anyone for you. Not on a schedule, not ever.",
+    "Check X when you didn't press the button.",
     "Sell you followers.",
-    'Fake urgency. You\'ll never see "12 people viewing this ask."',
-    "Build dossiers on people.",
-    "Call itself an agent.",
+    "Fake urgency. You'll never see \"12 people are looking at this.\"",
+    "Keep files on people.",
+    "Call ourselves an agent.",
   ],
-  alwaysTitle: "Always",
+  alwaysTitle: "We always",
   always: [
-    "Show the original post, the author and the link.",
-    "Tell you where the data comes from: public X posts, read-only.",
-    "Hide an author in one press, and make every action one press from undone.",
+    "Show you the real post, who wrote it, and the link.",
+    "Tell you where it came from: public X posts, read only.",
+    "Let you hide someone in one press, and undo anything in one press.",
   ],
-  close: "We never post as you.",
+  close: "You need no X password, and we never get write access to your account.",
 } as const;
 
-export const circle = {
-  id: "circle",
-  label: "The Circle",
+export const follow = {
+  id: "follow",
+  label: "The accounts you follow",
   h2: "Who have you gone quiet on?",
-  lead: "Your Circle is about a hundred accounts you picked: peers, buyers and the people your buyers listen to. The Room lane watches them. The longer you keep a Circle, the more it knows about who you've shown up for.",
+  lead:
+    "You pick about a hundred accounts: buyers, people like you, and people your buyers listen to. We watch what they post. The longer you keep the list, the more it knows about who you've shown up for.",
   neglect: {
-    title: "The neglect list",
-    heading: 'Your CRM has a "last contacted" column. X doesn\'t. This does.',
-    lead: "My Circle isn't a roster. It's an answer. For every account it works out how long since they posted, since you saw one of their posts and since you last replied. Then it sorts them:",
+    title: "The quiet list",
+    heading: "A CRM tells you who you haven't called. X doesn't. This does.",
+    lead:
+      "For each account we work out three things: when they last posted, when you last saw one of their posts, and when you last replied. Then we sort them.",
     items: [
       {
-        name: "Neglected.",
-        body: "They're posting. You haven't shown up in 14 days.",
+        name: "You've gone quiet on them.",
+        body: "They're posting. You haven't replied in two weeks.",
       },
       {
-        name: "Quiet.",
-        body: "They stopped posting. This is checked first, so you're never blamed for someone else's silence.",
+        name: "They've gone quiet.",
+        body: "They stopped posting. We check this first, so you're never blamed for someone else's silence.",
       },
       {
-        name: "Drop list.",
-        body: "Quiet for 30 days or more. Offered for removal five at a time. Say keep, and it stays kept.",
+        name: "Maybe drop them.",
+        body: "Nothing from them for a month. We offer five at a time. Say keep, and they stay.",
       },
     ],
-    foot: "New members get a week before any of this applies.",
+    foot: "New accounts get a week before any of this counts.",
   },
   weeklyFive: {
     pro: true,
-    title: "The weekly five",
-    heading: "Five new accounts a week. At least two from outside your bubble.",
-    body: "Once a week it suggests five accounts to add, and at least two have to come from outside the conversation your Circle is already having. That's a rule, not a preference. A Circle that only finds people already talking to each other makes you local, then invisible.",
-    analogy: "You're posting into your own house while the party is next door.",
-    bar: "Every suggestion has to clear a bar printed on screen: posted on your topic in the last 21 days, between 1,000 and 2,000,000 followers, and real engagement, measured by median, never average. An account shows up because it posted, which proves it's real. Nothing an AI merely remembers ever reaches your screen.",
-    reject: "Reject one, and you'll never be pitched it again.",
+    title: "Five a week",
+    heading: "Five new accounts a week. At least two from outside your own circle.",
+    body:
+      "Once a week we suggest five accounts to add. At least two have to come from outside the group you already follow. That's a rule, not a setting. A list that only finds people who already talk to each other makes you a local, then makes you invisible.",
+    analogy: "Otherwise you're posting in your own living room while the party is next door.",
+    bar:
+      "Every suggestion has to clear a bar we print on the screen: posted about your topic in the last three weeks, between 1,000 and 2,000,000 followers, and real replies and likes. We only suggest accounts we found posting, so we know they're real. Nothing an AI merely remembers reaches your screen.",
+    reject: "Say no once, and we never suggest that account again.",
   },
   finding: {
-    title: "Finding accounts",
-    body: "Paste them one per line. Or let it search your keywords twice: once for the most-liked posts, meaning who the market is built around, and once for the most recent, meaning who's talking right now. You see the numbers that ranked each account, and you approve them one at a time.",
+    title: "Adding accounts",
+    body:
+      "Paste them one per line. Or let us search your topics two ways: the most-liked posts, to find who the market is built around, and the newest posts, to find who's talking today. You see the numbers behind each one, and you approve them one at a time.",
   },
   channels: {
     pro: true,
-    title: "Channels",
-    heading: "Rooms you walk into for two weeks.",
-    body: "A Channel is a hand-built set of accounts and phrases around a topic. Join one, and its posts show up in your Room lane, tagged. The join ends on its own after 14 days. Up to three at once.",
+    title: "Topic rooms",
+    heading: "Join a topic for two weeks.",
+    body:
+      "A topic room is a hand-picked set of accounts and phrases around one subject. Join one and its posts show up on your page, tagged. The join ends by itself after 14 days. Three at a time.",
     analogy:
-      "A Channel never adds anyone to your Circle. Think of your Circle as your contacts and a Channel as a conference badge that expires. Leave whenever you like, and anything you saved outlives the room.",
-    roomsLabel: "Rooms right now",
+      "A topic room never adds anyone to your own list. Your list is your contacts. A room is a conference badge that expires. Leave whenever you like, and anything you saved stays.",
+    roomsLabel: "Rooms open now",
     rooms: [
       "Build in public",
       "Bootstrapped SaaS",
@@ -337,30 +370,30 @@ export const circle = {
     ],
   },
   close:
-    "Deactivating someone never deletes them. Downgrading never deletes anyone. Your Circle is yours.",
+    "Turning someone off never deletes them. Downgrading never deletes anyone. The list is yours.",
 } as const;
 
 export const walkthrough = {
   label: "Example",
-  h2: "One card, start to finish.",
+  h2: "One post, start to finish.",
   disclosure:
-    "An example desk for a founder who sells a small status-page tool. The post is written for this page. The rules it passed are real.",
+    "An example for a founder who sells a small status page tool. The post is written for this page. The rules it passed are real.",
   steps: [
     {
       n: "1",
-      title: "Scan.",
-      body: "They press Scan now at 9:02. Most of what comes back is thrown out, and three cards make the desk.",
+      title: "Press Scan.",
+      body: "They press the button at 9:02. Most of what comes back gets thrown out. Three posts make the page.",
     },
     {
       n: "2",
-      title: "The card.",
+      title: "The post.",
       post: deskCards.ask.post,
       why: deskCards.ask.why,
     },
     {
       n: "3",
       title: "Why it made it.",
-      body: "14 minutes old, under 72 hours. 5 replies, under 60. 2,140 followers, under 250,000. The account is years old. The post is a real question, not a giveaway.",
+      body: "14 minutes old, well under three days. 5 replies, well under 60. 2,140 followers, well under 250,000. The account is years old. It's a real question, not a giveaway.",
     },
     {
       n: "4",
@@ -370,12 +403,12 @@ export const walkthrough = {
     {
       n: "5",
       title: "What they changed.",
-      body: '"and can share it if useful" became "happy to send it over." Their words, not ours.',
+      body: "\"and can share it if useful\" became \"happy to send it over.\" Their words, not ours.",
     },
     {
       n: "6",
       title: "Sent.",
-      body: "Copied, opened on X, posted from their own account at 9:07. Reply number six, not reply number forty-six.",
+      body: "Copied, opened on X, sent from their own account at 9:07. Reply number six, not reply number forty-six.",
     },
   ],
 } as const;
@@ -385,80 +418,81 @@ export const audience = {
   forTitle: "For",
   forItems: [
     {
-      title: "Solo founders whose distribution is their own posts and replies.",
-      body: "You can name twelve accounts you should be in the replies of, and you know there are a hundred.",
+      title: "Founders who get work from their own posts and replies.",
+      body: "You can name twelve accounts you should be replying to, and you know there are a hundred more.",
     },
     {
       title: "Agency owners and consultants",
-      body: "who get hired because the right operators keep seeing their name.",
+      body: "who get hired because the right people keep seeing their name.",
     },
     {
-      title: "Creators with a product behind the audience,",
-      body: "who know replies are the job and refuse to sound like a bot doing it.",
+      title: "Creators with something to sell,",
+      body: "who know replies are the job and won't sound like a bot doing it.",
     },
   ],
   notTitle: "Not for",
   notItems: [
     {
-      title: "Ad-budget brands and paid-growth teams.",
-      body: "Your distribution isn't your own face.",
+      title: "Brands with an ad budget.",
+      body: "Your growth doesn't depend on your own face.",
     },
     {
-      title: "SDRs counting leads.",
+      title: "Sales reps counting leads.",
       body: "This is a daily habit, not a lead counter.",
     },
     {
       title: "People who want to post more.",
-      body: "That's Typefully or Hypefury. They decide what you post. We help with who you show up for.",
+      body: "That's Typefully or Hypefury. They help with what you post. We help with who you show up for.",
     },
     {
-      title: "Anyone after auto-replies, pods or mass-follow.",
+      title: "Anyone who wants auto-replies, pods or mass-follow.",
       body: "We never touch your account.",
     },
     {
-      title: "Anyone who won't pick about a hundred accounts.",
-      body: "The Circle is the product.",
+      title: "Anyone who won't pick about a hundred accounts to follow.",
+      body: "That list is the whole product.",
     },
   ],
   close:
-    "If you want volume, there are tools for that. This one sends you back to X with a few replies worth sending.",
+    "If you want volume, other tools do that. This one sends you back to X with a few replies worth sending.",
 } as const;
 
 export const pricing = {
   id: "pricing",
   h2: "Start free. Pay when ten accounts isn't enough.",
-  lede: "Scan works on the free plan, because an empty desk doesn't sell a desk. The limits are meant to show up after it's worked.",
+  lede:
+    "The button works on the free plan, because an empty page doesn't sell anything. The limits show up after it's already worked.",
   plans: [
     {
       name: "Free",
       price: "$0",
       period: "",
-      tagline: "See whether your corner of X is worth a desk.",
-      cta: "Start a desk",
+      tagline: "See if your corner of X is worth the time.",
+      cta: "Start free",
     },
     {
       name: "Pro",
       price: "$29",
       period: "/mo",
-      tagline: "Keep up with your whole Circle.",
-      cta: "Start a desk",
+      tagline: "Keep up with everyone you follow.",
+      cta: "Start free",
     },
   ],
   rows: [
     { feature: "Scan now", free: "Yes", pro: "Yes" },
-    { feature: "Circle accounts", free: "10", pro: "150" },
-    { feature: "Keyword searches", free: "2", pro: "12" },
-    { feature: "Cards a day", free: "10 per lane", pro: "Unlimited" },
-    { feature: "Why-line on every card", free: "Yes", pro: "Yes" },
-    { feature: "Saved", free: "Never capped", pro: "Never capped" },
-    { feature: "Drafts in your voice", free: "—", pro: "Yes" },
-    { feature: "The weekly five", free: "—", pro: "Yes" },
-    { feature: "Channels", free: "—", pro: "Yes" },
+    { feature: "Accounts you can follow", free: "10", pro: "150" },
+    { feature: "Things we search for", free: "2", pro: "12" },
+    { feature: "Posts a day", free: "10 per list", pro: "No limit" },
+    { feature: "A reason on every post", free: "Yes", pro: "Yes" },
+    { feature: "Saved posts", free: "No limit", pro: "No limit" },
+    { feature: "Drafts in your own voice", free: "—", pro: "Yes" },
+    { feature: "Five suggestions a week", free: "—", pro: "Yes" },
+    { feature: "Topic rooms", free: "—", pro: "Yes" },
   ],
   notes: [
-    "$29/mo. Cancel on Whop.",
-    "A downgrade never deletes anything. Your Circle stays active and scanned; the cap is only on adding.",
-    "We never post as you.",
+    "$29 a month. Cancel on Whop.",
+    "Downgrading never deletes anything. Your accounts stay, and we keep checking them. The limit is only on adding more.",
+    "We never post for you.",
   ],
 } as const;
 
@@ -470,28 +504,28 @@ export const faq = {
       a: "No. Never.",
     },
     {
-      q: "Where does the data come from?",
-      a: "Public X posts, read-only. No X password required, no write access to your account.",
+      q: "Where do the posts come from?",
+      a: "Public posts on X, read only. No X password, and no write access to your account.",
     },
     {
       q: "Is this a growth tool?",
-      a: "No. It's a queue. Success is a useful reply.",
+      a: "No. It's a short list of posts to answer. It worked if the reply was useful.",
     },
     {
-      q: "What if the desk is empty?",
-      a: "Good. We don't lower the floor.",
+      q: "What if the page is empty?",
+      a: "Good. We'd rather show you nothing than lower the bar.",
     },
     {
       q: "Does it run in the background?",
-      a: "No. You press Scan now. Nothing checks X while you're away, and nothing runs overnight.",
+      a: "No. You press Scan. Nothing checks X while you're away, and nothing runs overnight.",
     },
     {
-      q: "What's the difference between Free and Pro?",
-      a: "Pro writes drafts, holds 150 Circle accounts instead of 10, and adds the weekly five and Channels. Scan works on both.",
+      q: "What's the difference between free and paid?",
+      a: "Paid writes your first drafts, follows 150 accounts instead of 10, suggests five new accounts a week, and opens topic rooms. The button works on both.",
     },
     {
       q: "What happens if I downgrade?",
-      a: "Nothing gets deleted. Your Circle stays active and scanned. You just can't add past the free limit.",
+      a: "Nothing gets deleted. Your accounts stay, and we keep checking them. You just can't add more past the free limit.",
     },
     {
       q: "Is it only for X?",
@@ -505,21 +539,21 @@ export const faq = {
 } as const;
 
 export const finalCta = {
-  frame: "We never post as you.",
-  h2: "Your desk is two questions away.",
-  body: "Tell it what you sell. Paste five accounts you already read. That is the whole setup.",
-  primary: "Start a desk",
-  trust: "We never post as you. · Free plan · No X password",
+  frame: "We never post for you.",
+  h2: "Two questions and you're set up.",
+  body: "Tell us what you sell. Paste five accounts you already read. That's the whole setup.",
+  primary: "Start free",
+  trust: "We never post for you. · Free plan · No X password",
 } as const;
 
 export const footer = {
   copy: "© 2026 replylane",
-  trust: "We never post as you.",
+  trust: "We never post for you.",
 } as const;
 
 export const notFound = {
   h1: "Nothing at this address.",
-  body: "The desk is one click away.",
+  body: "Your page is one click away.",
   cta: "Go to the homepage",
 } as const;
 

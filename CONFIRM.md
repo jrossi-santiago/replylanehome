@@ -1,6 +1,30 @@
 # CONFIRM.md
 
-Facts the marketing site must not guess. Resolved items are marked; unresolved items were removed from production copy.
+Facts the marketing site must not guess. Resolved items are marked; held-back items stay out of production copy.
+
+## Shipped from the 2026-09-11 site copy
+
+Unresolved items in that draft were settled as follows so the page could ship. Change the copy if a fact turns out wrong.
+
+| Fact | Decision | Why |
+| --- | --- | --- |
+| Score format on mock cards | Omitted | Format is unconfirmed. The why-line is the proof. |
+| Card action name after sending | "Mark it replied." | Matches the metric the brief tracks. |
+| Neglect list and Find accounts on Free vs Pro | Left out of the pricing table | The copy already omits both. |
+| Pro button at sign-up | "Start a desk" on both plans, same `/signin` URL | Sign-up is one magic-link path. Upgrade happens in the app. |
+| Desk mock posts | Invented, realistic posts for a status-page founder | The walkthrough discloses this. No sourced posts on hand. |
+| Naming Typefully and Hypefury | Named in "Not for" | The approved copy names them. |
+
+## Held back until true
+
+| Item | Why |
+| --- | --- |
+| Morning digest | Recurring send is not scheduled in production |
+| Worked-example outcome | No customers yet; the walkthrough ends at send |
+| Testimonials, logos, counts, waitlist | None exist. `content/testimonials.ts` stays empty and off the page |
+| Claims about what Channels surface | Never scanned against live data |
+| Agency tier | Someday, not today |
+| Terms / Privacy URLs | Pages do not exist. Footer has no `href="#"` |
 
 ## Resolved from dash.replylane.app
 
@@ -9,28 +33,3 @@ Facts the marketing site must not guess. Resolved items are marked; unresolved i
 | Signup path | `/signin` | Live app redirects start/desk to magic-link sign-in |
 | Login path | `/signin` | Same page; "Sign in — replylane" |
 | Analytics provider | none found | No analytics scripts on dash sign-in |
-
-## Unresolved (removed from production copy)
-
-| Placeholder | Where it would have appeared |
-| --- | --- |
-| `{confirm: how quiet accounts are shown}` | Chapter one · Windows point |
-| `{confirm: the window age rule}` | Chapter one · Windows point |
-| `{confirm: what the floor filters}` | Chapter one · The floor point |
-| `{confirm: source for ninety minutes, or cut this sentence}` | Argument card body + ~90 min line (cut) |
-| `{confirm: read-only access}` | Chapter two · You send body (cut; kept "no send button") |
-| `{confirm: what a channel does, in two sentences}` | Chapter three · Channels body expansion |
-| `{confirm}` channel feature points (×3) | Chapter three · Channels points |
-| `{confirm: channel UI}` | Chapter three · Channels illustration |
-| `{confirm: when the digest sends and what it contains}` | Chapter three · Morning digest body |
-| `{confirm}` digest points | Chapter three · Morning digest points |
-| `{confirm: price and what is included}` | Pricing lede (kept "$29/mo" only where prompt states it as final) |
-| `{confirm: plan count, names and prices}` | Pricing cards (shipped one $29/mo plan from known copy) |
-| `{confirm}` scan limits, circle size, keyword count | Pricing rows (12 queries / 150 accounts / 72 hours not used) |
-| `{confirm: legal URLs}` | Footer Legal links (Terms/Privacy hrefs omitted until confirmed) |
-| `{confirm: target seller types}` | For and not for · first For line (cut qualifier) |
-| Brand docs `REPLYLANE_BRAND_IDENTITY.md`, `REPLYLANE_SITE_KIT.md`, `REPLYLANE_LANDING_PROMPT.md` | Not present in this repo or dash; icon Appendix B regenerated from brand technique; hero card copy reconstructed from section 5.2 |
-
-## Brand docs
-
-Place the three source documents in `/docs` when available. This prompt remains precedence over them.

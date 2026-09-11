@@ -5,6 +5,7 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Follow } from "@/components/sections/Follow";
 import { Footer } from "@/components/sections/Footer";
+import { Frames } from "@/components/sections/Frames";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Lists } from "@/components/sections/Lists";
@@ -31,6 +32,7 @@ export default function HomePage() {
         <TheDraft />
         <RulesBand />
         <Follow />
+        <Frames />
         <Walkthrough />
         <Audience />
         <Pricing />

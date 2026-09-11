@@ -191,6 +191,42 @@ export const deskCards = {
 
 export const askDraftLength = deskCards.ask.draft.length;
 
+export const frames = {
+  panels: [
+    {
+      mark: true,
+      size: "side" as const,
+      lines: ["Reply where", "they already are"],
+      body: "People asking for what you sell, and posts from the accounts you follow.",
+      foot: "replylane.app",
+      frame:
+        "replylane finds the X posts worth replying to \u00b7 You write the reply",
+      fill: "ink" as const,
+      outline: "lilac" as const,
+    },
+    {
+      mark: false,
+      size: "lead" as const,
+      lines: ["You write", "the reply"],
+      body: null,
+      foot: "replylane.app",
+      frame: "We find the posts \u00b7 You write the reply",
+      fill: "ink" as const,
+      outline: "clay" as const,
+    },
+    {
+      mark: true,
+      size: "side" as const,
+      lines: ["We never post", "for you"],
+      body: "Fewer posts, better ones. A person hits send.",
+      foot: null,
+      frame: "We never post for you \u00b7 Public posts, read only",
+      fill: "ink" as const,
+      outline: "paper" as const,
+    },
+  ],
+} as const;
+
 export const howItWorks = {
   id: "how",
   h2: "Three steps. The last one is yours.",

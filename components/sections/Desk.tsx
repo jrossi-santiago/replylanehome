@@ -69,10 +69,9 @@ export function Desk() {
               enterClass="hero-card-enter hero-card-enter-3"
             />
           </div>
-
-          <p className="mt-6 text-center font-body text-[15px] text-ink/70">{desk.caption}</p>
         </div>
       </div>
+      <p className="relative mt-6 text-center font-body text-[15px] text-ink/70">{desk.caption}</p>
     </GridBand>
   );
 }

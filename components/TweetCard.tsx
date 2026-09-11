@@ -93,25 +93,25 @@ function Action({ d, value, label, accent = false }: ActionProps) {
   );
 }
 
-/** Hand-drawn style hook that curves up out of the card into the note. */
+/** Hand-drawn style hook: rises diagonally off the card's top-right corner. */
 function NoteArrow() {
   return (
     <svg
-      width="54"
+      width="58"
       height="56"
-      viewBox="0 0 54 56"
+      viewBox="0 0 58 56"
       fill="none"
       aria-hidden="true"
       className="shrink-0 text-clay-deep"
     >
       <path
-        d="M52 54c-13 1-25-3-32-12C13 33 11 22 12 8"
+        d="M2 3C18 9 34 21 44 44"
         stroke="currentColor"
         strokeWidth="1.7"
         strokeLinecap="round"
       />
       <path
-        d="M12 8 6.5 16M12 8l6.5 6.5"
+        d="M44 44 45.4 33.6M44 44 35.6 38.1"
         stroke="currentColor"
         strokeWidth="1.7"
         strokeLinecap="round"
@@ -131,6 +131,17 @@ export function TweetCard({ className = "" }: Props) {
 
   return (
     <figure className={`mx-auto w-full max-w-[560px] text-left ${className}`}>
+      <div className="-mb-1 flex items-end justify-end gap-1 pr-4 md:pr-7">
+        <p className="max-w-[300px] pb-2 text-right">
+          <span className="mb-1 flex items-center justify-end gap-1.5 font-mono text-[12px] text-ink/60">
+            <Lamp state="done" surface="light" />
+            {t.note.label}
+          </span>
+          <span className="type-why block">{t.note.text}</span>
+        </p>
+        <NoteArrow />
+      </div>
+
       <article className="rounded-2xl border border-ink/10 bg-snow p-4 shadow-card sm:p-5 md:p-6">
         <header className="flex items-start gap-3">
           <Avatar />
@@ -199,18 +210,7 @@ export function TweetCard({ className = "" }: Props) {
         </div>
       </article>
 
-      <div className="mt-1 flex items-start gap-3 pl-4 md:pl-6">
-        <NoteArrow />
-        <p className="max-w-[330px] pt-7">
-          <span className="mb-1 flex items-center gap-1.5 font-mono text-[12px] text-ink/60">
-            <Lamp state="done" surface="light" />
-            {t.note.label}
-          </span>
-          <span className="type-why block">{t.note.text}</span>
-        </p>
-      </div>
-
-      <figcaption className="mt-4 text-center type-frame text-ink/50">{t.caption}</figcaption>
+      <figcaption className="mt-3 text-center type-frame text-ink/50">{t.caption}</figcaption>
     </figure>
   );
 }

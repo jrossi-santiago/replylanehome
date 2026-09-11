@@ -102,7 +102,7 @@ function NoteArrow() {
       viewBox="0 0 58 56"
       fill="none"
       aria-hidden="true"
-      className="shrink-0 text-clay-deep"
+      className="shrink-0 text-clay-deep xl:-scale-x-100"
     >
       <path
         d="M2 3C18 9 34 21 44 44"
@@ -130,10 +130,12 @@ export function TweetCard({ className = "" }: Props) {
   const t = heroTweet;
 
   return (
-    <figure className={`mx-auto w-full max-w-[560px] text-left ${className}`}>
-      <div className="-mb-1 flex items-end justify-end gap-1 pr-4 md:pr-7">
-        <p className="max-w-[300px] pb-2 text-right">
-          <span className="mb-1 flex items-center justify-end gap-1.5 font-mono text-[12px] text-ink/60">
+    <figure className={`relative mx-auto w-full max-w-[560px] text-left ${className}`}>
+      {/* Below xl the note stacks above the card; from xl it leaves the flow and
+          juts into the right margin, so the card keeps its original position. */}
+      <div className="-mb-1 flex items-end justify-end gap-1 pr-4 md:pr-7 xl:absolute xl:-top-11 xl:left-full xl:-ml-3 xl:mb-0 xl:w-[332px] xl:flex-row-reverse xl:items-start xl:gap-6 xl:pr-0 2xl:w-[392px]">
+        <p className="max-w-[300px] pb-2 text-right xl:max-w-none xl:pb-0 xl:pt-10 xl:text-left">
+          <span className="mb-1 flex items-center justify-end gap-1.5 font-mono text-[12px] text-ink/60 xl:justify-start">
             <Lamp state="done" surface="light" />
             {t.note.label}
           </span>

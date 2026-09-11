@@ -116,6 +116,44 @@ export const deskCards = {
 
 export const askDraftLength = deskCards.ask.draft.length;
 
+export const frames = {
+  panels: [
+    {
+      mark: true,
+      size: "side" as const,
+      lines: ["A desk for", "public intent"],
+      body: "Asks and still-open threads. Scored for what you sell.",
+      foot: "replylane.app",
+      frame:
+        "replylane finds the X conversations that can become customers · You answer them",
+      fill: "ink" as const,
+      outline: "lilac" as const,
+    },
+    {
+      mark: false,
+      size: "lead" as const,
+      lines: ["Where the feed", "becomes a desk"],
+      body: null,
+      foot: "replylane.app",
+      frame:
+        "Finds the X conversations that can become customers · You answer them",
+      fill: "ink" as const,
+      outline: "clay" as const,
+    },
+    {
+      mark: true,
+      size: "side" as const,
+      lines: ["You answer", "them"],
+      body: "Fewer cards, better ones. A human hits send.",
+      foot: null,
+      frame:
+        "You answer them · replylane finds the X conversations that can become customers",
+      fill: "ink" as const,
+      outline: "paper" as const,
+    },
+  ],
+} as const;
+
 export const argument = {
   label: "The problem",
   h2: "The feed is a terrible CRM.",

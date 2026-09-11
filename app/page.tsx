@@ -6,6 +6,7 @@ import { Desk } from "@/components/sections/Desk";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
+import { Frames } from "@/components/sections/Frames";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Pricing } from "@/components/sections/Pricing";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <main id="main">
         <Hero />
         <Desk />
+        <Frames />
         <ArgumentCard />
         <TwoKinds />
         <HowItWorks />

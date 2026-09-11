@@ -1,3 +1,4 @@
+import { Lamp } from "@/components/Lamp";
 import { heroTweet } from "@/content/site";
 
 /** Avatar drawn in code: flat ink disc with a clay dot lane. No image asset. */
@@ -92,6 +93,34 @@ function Action({ d, value, label, accent = false }: ActionProps) {
   );
 }
 
+/** Hand-drawn style hook that curves up out of the card into the note. */
+function NoteArrow() {
+  return (
+    <svg
+      width="54"
+      height="56"
+      viewBox="0 0 54 56"
+      fill="none"
+      aria-hidden="true"
+      className="shrink-0 text-clay-deep"
+    >
+      <path
+        d="M52 54c-13 1-25-3-32-12C13 33 11 22 12 8"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+      <path
+        d="M12 8 6.5 16M12 8l6.5 6.5"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 type Props = {
   className?: string;
 };
@@ -169,7 +198,19 @@ export function TweetCard({ className = "" }: Props) {
           </span>
         </div>
       </article>
-      <figcaption className="mt-3 text-center type-frame text-ink/50">{t.caption}</figcaption>
+
+      <div className="mt-1 flex items-start gap-3 pl-4 md:pl-6">
+        <NoteArrow />
+        <p className="max-w-[330px] pt-7">
+          <span className="mb-1 flex items-center gap-1.5 font-mono text-[12px] text-ink/60">
+            <Lamp state="done" surface="light" />
+            {t.note.label}
+          </span>
+          <span className="type-why block">{t.note.text}</span>
+        </p>
+      </div>
+
+      <figcaption className="mt-4 text-center type-frame text-ink/50">{t.caption}</figcaption>
     </figure>
   );
 }

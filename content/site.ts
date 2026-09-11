@@ -62,6 +62,10 @@ export const heroTweet = {
     { value: "1,204", label: "Likes" },
     { value: "96", label: "Bookmarks" },
   ],
+  note: {
+    label: "replylane",
+    text: "This post is being read by people who are likely to become your customers. Reply to this one.",
+  },
   caption: "A mockup. Drawn in code, not a screenshot.",
 } as const;
 

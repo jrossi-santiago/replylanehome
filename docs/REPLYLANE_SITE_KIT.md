@@ -10,7 +10,7 @@
 - No exclamation marks, emoji, apologies, or cheering
 - Name the limits out loud
 - Sentence case everywhere except the wordmark `replylane`
-- Product words: desk, card, ask, window, circle, channel, scan, why-line, floor, quiet, morning ops
+- Product words: desk, card, ask, Room, Circle, Channel, scan, why-line, floor, quiet. "window" is lowercase for the moment a thread is still open. Never "Window" as a lane.
 
 ## Hero desk cards
 

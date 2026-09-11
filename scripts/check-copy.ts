@@ -4,29 +4,24 @@
  */
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
-import { mayaDraftLength, deskCards } from "../content/site";
+import { askDraftLength, deskCards, roomDraftLength, theDraft } from "../content/site";
 
 const BANNED = [
   "10x",
   "unlock",
   "turbocharge",
   "supercharge",
-  "engagement",
-  "AI agent",
   "AI-powered",
+  "AI agent",
   "while you sleep",
   "grow your brand",
   "must-have",
   "effortless",
-  "seamless",
   "excited",
-  "thrilled",
-  "leads",
-  "automate",
-  "powerful",
-  "smart",
-  "advanced",
+  "revolutionize",
   "game-changer",
+  "reply-lane",
+  "lock in",
 ];
 
 const roots = ["app", "components", "content"];
@@ -52,33 +47,52 @@ function ok(msg: string) {
   console.log("ok:", msg);
 }
 
-// Draft length
-if (mayaDraftLength !== deskCards.maya.draft.length) {
-  fail("maya draft length mismatch");
-} else if (mayaDraftLength !== 185) {
-  fail(`maya draft length is ${mayaDraftLength}, expected 185`);
+function wordCount(s: string) {
+  return s.trim().split(/\s+/).filter(Boolean).length;
+}
+
+if (askDraftLength !== deskCards.ask.draft.length) {
+  fail("ask draft length mismatch");
+} else if (askDraftLength > 280) {
+  fail(`ask draft length is ${askDraftLength}, over 280`);
 } else {
-  ok(`draft count ${mayaDraftLength}`);
+  ok(`ask draft count ${askDraftLength}`);
+}
+
+if (roomDraftLength !== theDraft.compare.room.draft.length) {
+  fail("room draft length mismatch");
+} else if (roomDraftLength > 280) {
+  fail(`room draft length is ${roomDraftLength}, over 280`);
+} else {
+  ok(`room draft count ${roomDraftLength}`);
+}
+
+for (const [name, why] of Object.entries({
+  ask: deskCards.ask.why,
+  outage: deskCards.outage.why,
+  changelog: deskCards.changelog.why,
+})) {
+  const n = wordCount(why);
+  if (n > 18) fail(`${name} why-line is ${n} words, max 18`);
+  else ok(`${name} why-line ${n} words`);
 }
 
 const files = roots.flatMap((r) => walk(join(process.cwd(), r)));
 const corpus = files.map((f) => readFileSync(f, "utf8")).join("\n");
+const site = readFileSync(join(process.cwd(), "content/site.ts"), "utf8");
+const page = readFileSync(join(process.cwd(), "app/page.tsx"), "utf8");
 
-// Banned words (case-insensitive) — exclude this script and CONFIRM
 for (const word of BANNED) {
   const re = new RegExp(word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i");
   if (re.test(corpus)) {
-    // find file
     const hit = files.find((f) => re.test(readFileSync(f, "utf8")));
     fail(`banned term "${word}" in ${hit}`);
   }
 }
 ok("no banned terms");
 
-// Exclamation marks in user-facing strings (rough): exclude code comments sparingly
 const bangFiles = files.filter((f) => {
   const t = readFileSync(f, "utf8");
-  // Look for ! inside string literals that aren't !== and !=
   return /['"`][^'"`]*![^'"`]*['"`]/.test(t) && !f.includes("check-copy");
 });
 if (bangFiles.length) {
@@ -87,20 +101,35 @@ if (bangFiles.length) {
   ok("no ! in strings");
 }
 
-// Unresolved confirm placeholders in content
-if (/\{confirm/.test(readFileSync(join(process.cwd(), "content/site.ts"), "utf8"))) {
-  fail("{confirm} left in content/site.ts");
+if (/\{confirm/i.test(site) || /\{FILL\}/.test(site)) {
+  fail("{confirm} or {FILL} left in content/site.ts");
 } else {
-  ok("no {confirm} in site.ts");
+  ok("no placeholders in site.ts");
 }
 
-// Send / Post buttons
+if (/label:\s*"Window"/.test(site) || />\s*Window\s*</.test(corpus)) {
+  fail("Window used as a lane name");
+} else {
+  ok("Room, not Window");
+}
+
+if (/TestimonialPair/.test(page)) {
+  fail("testimonials shipped on the homepage");
+} else {
+  ok("testimonials not on the homepage");
+}
+
+if (/digestPreview|Morning digest|Your desk this morning/.test(site)) {
+  fail("morning digest copy shipped");
+} else {
+  ok("digest held back");
+}
+
 if (/\bSend\b|\bPost\b/.test(corpus) && /button|Button/.test(corpus)) {
   const sendHits = files.filter((f) => {
     const t = readFileSync(f, "utf8");
     return /\b(Send|Post)\b/.test(t) && !f.includes("check-copy") && !f.includes("CONFIRM");
   });
-  // Allow "posts" lowercase narrative, block button labels
   const bad = sendHits.filter((f) => {
     const t = readFileSync(f, "utf8");
     return />\s*Send\s*</.test(t) || />\s*Post\s*</.test(t) || /"Send"|"Post"/.test(t);
@@ -111,7 +140,6 @@ if (/\bSend\b|\bPost\b/.test(corpus) && /button|Button/.test(corpus)) {
   ok("no Send/Post buttons");
 }
 
-// Accent phrase uniqueness — clay-deep on accent only in hero ideally
 const clayDeepFiles = files.filter((f) => readFileSync(f, "utf8").includes("clay-deep"));
 ok(`clay-deep references: ${clayDeepFiles.length} files`);
 

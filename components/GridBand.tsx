@@ -25,7 +25,7 @@ export function GridBand({
   const rule = surface === "paper" ? "rule-paper" : "rule-ink";
 
   return (
-    <Tag id={id} className={`relative ${bg} ${className}`}>
+    <Tag id={id} className={`relative scroll-mt-20 ${bg} ${className}`}>
       <div className="page-container relative">
         <div className={`pointer-events-none absolute inset-y-0 left-4 w-px md:left-6 ${rule}`} aria-hidden="true" />
         <div className={`pointer-events-none absolute inset-y-0 right-4 w-px md:right-6 ${rule}`} aria-hidden="true" />

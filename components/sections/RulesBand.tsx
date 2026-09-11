@@ -14,21 +14,36 @@ export function RulesBand() {
         >
           <Icon name="never_posts" size={28} className="text-ink" />
           <h2 className="type-h2 mt-4 text-ink">{rules.h2}</h2>
-          <ul className="mt-8">
-            {rules.items.map((item, i) => (
-              <li
-                key={item}
-                className={`font-head text-[20px] font-semibold leading-[26px] tracking-[-0.015em] text-ink md:text-[22px] ${
-                  i > 0 ? "mt-4 border-t border-ink/12 pt-4" : ""
-                }`}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-8 font-body text-[15px] leading-[22px] text-ink/65">{rules.foot}</p>
+          <p className="mt-4 font-body text-[16px] leading-[25px] text-ink/70">{rules.lead}</p>
+          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10">
+            <RuleList title={rules.neverTitle} items={rules.never} />
+            <RuleList title={rules.alwaysTitle} items={rules.always} />
+          </div>
+          <p className="mt-8 font-body text-[16px] leading-[25px] font-medium text-ink">
+            {rules.close}
+          </p>
         </TextFrame>
       </div>
     </Section>
+  );
+}
+
+function RuleList({ title, items }: { title: string; items: readonly string[] }) {
+  return (
+    <div>
+      <h3 className="type-h3 text-ink">{title}</h3>
+      <ul className="mt-4">
+        {items.map((item, i) => (
+          <li
+            key={item}
+            className={`font-body text-[16px] leading-[25px] text-ink ${
+              i > 0 ? "mt-3 border-t border-ink/12 pt-3" : ""
+            }`}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

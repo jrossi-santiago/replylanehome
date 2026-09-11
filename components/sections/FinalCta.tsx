@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { Button } from "@/components/Button";
-import { DeskCard } from "@/components/DeskCard";
 import { GridBand } from "@/components/GridBand";
 import { TextFrame } from "@/components/TextFrame";
-import { deskCards, finalCta, urls } from "@/content/site";
+import { finalCta, urls } from "@/content/site";
 
 export function FinalCta() {
   return (
@@ -31,21 +30,11 @@ export function FinalCta() {
           <p className="mt-4 font-body text-[16px] leading-[25px] text-ink/70">
             {finalCta.body}
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8">
             <Button href={urls.signup}>{finalCta.primary}</Button>
-            <Button href="#desk" variant="secondary">
-              {finalCta.secondary}
-            </Button>
           </div>
           <p className="mt-4 font-body text-[15px] font-medium text-ink">{finalCta.trust}</p>
         </TextFrame>
-      </div>
-
-      <div className="relative mx-auto mt-12 max-w-[480px] space-y-4 overflow-hidden">
-        <DeskCard card={deskCards.dcarrington} forceClosed />
-        <div className="translate-y-8">
-          <DeskCard card={deskCards.priyaships} forceClosed />
-        </div>
       </div>
     </GridBand>
   );

@@ -20,4 +20,4 @@ npm run build
 
 ## Content
 
-All copy lives in `content/site.ts`. Unresolved product facts are listed in `CONFIRM.md`.
+All page copy lives in `content/site.ts`, drafted from `.agents/site-copy.md` and `.agents/product-marketing.md`. Unresolved product facts are listed in `CONFIRM.md`.

@@ -12,7 +12,11 @@ export function Audience() {
           <ul className="mt-6 space-y-5">
             {audience.forItems.map((item) => (
               <li key={item.title} className="flex gap-3">
-                <Icon name="check" size={20} className="mt-0.5 shrink-0 text-ink" />
+                <Icon
+                  name="check"
+                  size={20}
+                  className="mt-0.5 shrink-0 text-ink"
+                />
                 <div>
                   <p className="font-body text-[16px] font-bold leading-[25px] text-ink">
                     {item.title}
@@ -30,7 +34,11 @@ export function Audience() {
           <ul className="mt-6 space-y-5">
             {audience.notItems.map((item) => (
               <li key={item.title} className="flex gap-3">
-                <Icon name="not_this" size={20} className="mt-0.5 shrink-0 text-ink" />
+                <Icon
+                  name="not_this"
+                  size={20}
+                  className="mt-0.5 shrink-0 text-ink"
+                />
                 <div>
                   <p className="font-body text-[16px] font-bold leading-[25px] text-ink">
                     {item.title}

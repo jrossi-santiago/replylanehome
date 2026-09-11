@@ -25,9 +25,11 @@
 | the reason on every post | the why-line |
 | list, page | desk as a concept, lane |
 
-  The app's own tab labels (Asks, Room, Saved) and its button (Scan now) stay
-  as they are in screenshots and mock UI, and each list names its app label
-  once in small type. That is the only place the product vocabulary appears.
+  The app was renamed to the same words on 2026-09-11 (Reply list, Who you
+  follow, Topic rooms; tabs Asking to buy / People you follow / Saved), so the
+  mock UI on this site shows those labels and no "called X in the app" note is
+  needed. **Change a label on one side and change it on the other** — the mock
+  is a picture of a real screen. "Scan now" keeps its name on both.
 - No aphorisms standing in for the point. "Neglect is silent until pipeline
   is" was cut for the sentence that says the thing.
 

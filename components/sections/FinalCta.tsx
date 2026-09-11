@@ -6,7 +6,11 @@ import { finalCta, urls } from "@/content/site";
 
 export function FinalCta() {
   return (
-    <GridBand surface="ink" className="overflow-hidden" padClass="relative py-16 md:py-24">
+    <GridBand
+      surface="ink"
+      className="overflow-hidden"
+      padClass="relative py-16 md:py-24"
+    >
       <div
         className="pointer-events-none absolute inset-x-0 bottom-0 h-[55%] opacity-90"
         aria-hidden="true"
@@ -33,7 +37,9 @@ export function FinalCta() {
           <div className="mt-8">
             <Button href={urls.signup}>{finalCta.primary}</Button>
           </div>
-          <p className="mt-4 font-body text-[15px] font-medium text-ink">{finalCta.trust}</p>
+          <p className="mt-4 font-body text-[15px] font-medium text-ink">
+            {finalCta.trust}
+          </p>
         </TextFrame>
       </div>
     </GridBand>

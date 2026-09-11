@@ -13,17 +13,26 @@ export function Pricing() {
       </div>
       <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
         {pricing.plans.map((plan) => (
-          <div key={plan.name} className="flex flex-col rounded-xl bg-snow p-8 shadow-card">
-            <p className="font-head text-[18px] font-semibold text-ink">{plan.name}</p>
+          <div
+            key={plan.name}
+            className="flex flex-col rounded-xl bg-snow p-8 shadow-card"
+          >
+            <p className="font-head text-[18px] font-semibold text-ink">
+              {plan.name}
+            </p>
             <p className="mt-4 flex items-baseline gap-1">
               <span className="font-head text-[40px] font-semibold leading-none tracking-[-0.02em] text-ink">
                 {plan.price}
               </span>
               {plan.period ? (
-                <span className="font-mono text-[14px] text-ink/55">{plan.period}</span>
+                <span className="font-mono text-[14px] text-ink/55">
+                  {plan.period}
+                </span>
               ) : null}
             </p>
-            <p className="mt-3 font-body text-[15px] leading-[22px] text-ink/70">{plan.tagline}</p>
+            <p className="mt-3 min-h-11 font-body text-[15px] leading-[22px] text-ink/70">
+              {plan.tagline}
+            </p>
             <ul className="mt-8 space-y-3">
               {pricing.rows.map((row) => {
                 const value = plan.name === "Free" ? row.free : row.pro;

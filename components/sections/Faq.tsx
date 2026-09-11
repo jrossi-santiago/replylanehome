@@ -11,7 +11,9 @@ export function Faq() {
             <dt className="font-head text-[18px] font-semibold leading-[24px] text-ink">
               {item.q}
             </dt>
-            <dd className="mt-2 font-body text-[16px] leading-[25px] text-ink/75">{item.a}</dd>
+            <dd className="mt-2 font-body text-[16px] leading-[25px] text-ink/75">
+              {item.a}
+            </dd>
           </div>
         ))}
       </dl>

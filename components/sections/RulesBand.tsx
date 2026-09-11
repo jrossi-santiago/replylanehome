@@ -28,7 +28,13 @@ export function RulesBand() {
   );
 }
 
-function RuleList({ title, items }: { title: string; items: readonly string[] }) {
+function RuleList({
+  title,
+  items,
+}: {
+  title: string;
+  items: readonly string[];
+}) {
   return (
     <div>
       <h3 className="type-h3 text-paper">{title}</h3>

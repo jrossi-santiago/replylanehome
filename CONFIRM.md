@@ -11,9 +11,10 @@ Unresolved items in that draft were settled as follows so the page could ship. C
 | Score format on mock cards | Omitted | Format is unconfirmed. The why-line is the proof. |
 | Card action name after sending | "Mark it replied." | Matches the metric the brief tracks. |
 | Neglect list and Find accounts on Free vs Pro | Left out of the pricing table | The copy already omits both. |
-| Pro button at sign-up | "Start a desk" on both plans, same `/signin` URL | Sign-up is one magic-link path. Upgrade happens in the app. |
+| Pro button at sign-up | "Start free" on Free and "Start free, upgrade in the app" on Pro, same `/signin` URL | Sign-up is one magic-link path, so both buttons go to it; the Pro wording says so rather than implying a paid checkout. Was "Start a desk" until 2026-09-11. |
 | Desk mock posts | Invented, realistic posts for a status-page founder | The walkthrough discloses this. No sourced posts on hand. |
 | Naming Typefully and Hypefury | Named in "Not for" | The approved copy names them. |
+| Product vocabulary on the page | Removed 2026-09-11 | The site and the app now use plain English (Reply list, Who you follow, Topic rooms). See `docs/REPLYLANE_SITE_KIT.md`. |
 
 ## Held back until true
 

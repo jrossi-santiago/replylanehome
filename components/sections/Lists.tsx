@@ -21,9 +21,6 @@ export function Lists() {
             </p>
             <div className="md:col-span-6">
               <h3 className="type-h3 text-ink">{row.title}</h3>
-              <p className="mt-2 font-mono text-[13px] text-ink/50">
-                {row.appLabel}
-              </p>
             </div>
             <div className="md:col-span-4">
               <p className="font-body text-[16px] leading-[25px] text-ink/75">

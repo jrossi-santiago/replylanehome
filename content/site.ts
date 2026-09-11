@@ -46,7 +46,8 @@ export const heroTweet = {
     "Day 214 of building in public.",
     "Shipped a feature nobody asked for. Deleted it. Shipped the one three people asked for in a reply I almost missed.",
   ],
-  mentionBefore: "Every customer we got this month came from a post we replied to, not a post we wrote. The tool we use is ",
+  mentionBefore:
+    "Every customer we got this month came from a post we replied to, not a post we wrote. The tool we use is ",
   mention: "@replylane",
   mentionAfter: ", and it never posts for us.",
   tags: ["#buildinpublic", "#indiehackers", "#saas"] as const,
@@ -72,8 +73,7 @@ export const heroTweet = {
 /** Split card: the plain promise, right after the hero. */
 export const promise = {
   h2Lines: ["You reply.", "We do the", "looking."] as const,
-  body:
-    "A lot of buying talk happens on X, and it moves fast. Good posts go by before you ever see them. replylane looks for the ones that matter to you and puts them on one page. Nothing goes out without you.",
+  body: "A lot of buying talk happens on X, and it moves fast. Good posts go by before you ever see them. replylane looks for the ones that matter to you and puts them on one page. Nothing goes out without you.",
   caption: "Public posts. Read only.",
 } as const;
 
@@ -84,18 +84,25 @@ export const story = {
     {
       parts: [
         { text: "You already use X to find work. The problem is that " },
-        { text: "the feed decides what you see, and when you see it.", mark: true },
+        {
+          text: "the feed decides what you see, and when you see it.",
+          mark: true,
+        },
       ],
     },
     {
       parts: [
-        { text: "Someone asks for help at 9 in the morning. It reaches you at 4 in the afternoon, under forty other replies. " },
+        {
+          text: "Someone asks for help at 9 in the morning. It reaches you at 4 in the afternoon, under forty other replies. ",
+        },
         { text: "The person who answered at 9:20 got the job.", mark: true },
       ],
     },
     {
       parts: [
-        { text: "Then there are the hundred or so accounts whose followers are your buyers. You mean to stay visible to them. One busy week and you go quiet. " },
+        {
+          text: "Then there are the hundred or so accounts whose followers are your buyers. You mean to stay visible to them. One busy week and you go quiet. ",
+        },
         { text: "Nobody tells you. You just stop coming up.", mark: true },
       ],
     },
@@ -112,38 +119,30 @@ export const lists = {
       n: "01",
       icon: "ask" as IconName,
       title: "People asking for what you sell",
-      body:
-        "We search all of X for posts like \"can anyone recommend\" or \"we're looking for\". These are rare. When one shows up, answering early matters more than anything else.",
-      appLabel: "Called Asks in the app",
+      body: 'We search all of X for posts like "can anyone recommend" or "we\'re looking for". These are rare. When one shows up, answering early matters more than anything else.',
     },
     {
       n: "02",
       icon: "room" as IconName,
       title: "Posts from the accounts you follow",
-      body:
-        "New posts from the accounts you picked: buyers, people like you, and people your buyers listen to. A reply here gets read. Most days, this is where the work is.",
-      appLabel: "Called Room in the app",
+      body: "New posts from the accounts you picked: buyers, people like you, and people your buyers listen to. A reply here gets read. Most days, this is where the work is.",
     },
     {
       n: "03",
       icon: "saved" as IconName,
       title: "Posts you kept",
-      body:
-        "Anything you save stays saved. It never runs out and it's never limited, on either plan. A keep list that expires isn't a keep list.",
-      appLabel: "Called Saved in the app",
+      body: "Anything you save stays saved. It never runs out and it's never limited, on either plan. A keep list that expires isn't a keep list.",
     },
   ],
-  foot:
-    "Plenty of days the first list is empty. That's normal. The second list is why it's fine.",
+  foot: "Plenty of days the first list is empty. That's normal. The second list is why it's fine.",
 } as const;
 
 export const desk = {
   id: "desk",
   h2: "One page. A few posts. Then you're done.",
-  lead:
-    "No endless scroll. You press the button, you get a handful of posts, and each one says why it's there.",
-  title: "Reply Desk",
-  tabs: ["Asks", "Room", "Saved"] as const,
+  lead: "No endless scroll. You press the button, you get a handful of posts, and each one says why it's there.",
+  title: "Reply list",
+  tabs: ["Asking to buy", "People you follow", "Saved"] as const,
   scan: "Scan now",
   count: "3 posts",
   caption: "You copy the reply. You send it from your own account.",
@@ -153,7 +152,7 @@ export const desk = {
 export const deskCards = {
   ask: {
     kind: "ask" as const,
-    label: "Asks" as const,
+    label: "Asking to buy" as const,
     age: "14m ago",
     replies: "5 replies",
     followers: "2,140 followers",
@@ -162,11 +161,17 @@ export const deskCards = {
     draft:
       "If it's only incidents and email subscribers, most of what those $99 plans charge for is stuff you won't touch. Worth trying a smaller tool first. I built one for exactly that setup and can share it if useful.",
     open: true,
-    actions: ["Copy draft", "Open on X", "Save", "Hide author", "Not an ask"] as const,
+    actions: [
+      "Copy draft",
+      "Open on X",
+      "Save",
+      "Hide author",
+      "Not asking to buy",
+    ] as const,
   },
   outage: {
     kind: "room" as const,
-    label: "Room" as const,
+    label: "You follow" as const,
     age: "41m ago",
     replies: "3 replies",
     why: "Someone you follow, writing about outages, which is what you sell into. 41m ago, 3 replies.",
@@ -175,7 +180,7 @@ export const deskCards = {
   },
   changelog: {
     kind: "room" as const,
-    label: "Room" as const,
+    label: "You follow" as const,
     age: "22m ago",
     replies: "8 replies",
     why: "Someone you follow, talking changelogs with founders who ship weekly. 22m ago, 8 replies.",
@@ -230,16 +235,16 @@ export const howItWorks = {
 
 export const whyOnDesk = {
   h2: "Every post says why it's there.",
-  lead:
-    "A score with no reason is just decoration. So every post comes with one plain sentence, 18 words at most, sitting right above it.",
+  lead: "A score with no reason is just decoration. So every post comes with one plain sentence, 18 words at most, sitting right above it.",
   exampleWhy: deskCards.ask.why,
+  exampleLabel: "An example reason",
   filtersTitle: "What we throw out before you see anything",
   filtersLead: "Cheap checks run first, and they drop a lot:",
   cheapRules: [
     "Accounts less than three weeks old",
     "Accounts that look like follow farms",
     "Posts with almost no words in them",
-    "Giveaways, crypto, airdrops and \"DM me for\" posts",
+    'Giveaways, crypto, airdrops and "DM me for" posts',
     "Anyone you've hidden, and anyone flooding your page",
   ],
   asksBar: [
@@ -256,7 +261,7 @@ export const theDraft = {
   rulesTitle: "The rules it follows",
   rules: [
     "One to three sentences. Never a thread, never a list.",
-    "Never opens with a compliment. No \"Great question.\" No \"So true.\"",
+    'Never opens with a compliment. No "Great question." No "So true."',
     "Answers first. It never pitches in the first sentence.",
     "Only mentions what you sell when someone is asking to buy. In every other post, a pitch is how you get muted.",
     "No links, no hashtags, no emoji.",
@@ -296,7 +301,7 @@ export const rules = {
     "Post, like, follow or message anyone for you. Not on a schedule, not ever.",
     "Check X when you didn't press the button.",
     "Sell you followers.",
-    "Fake urgency. You'll never see \"12 people are looking at this.\"",
+    'Fake urgency. You\'ll never see "12 people are looking at this."',
     "Keep files on people.",
     "Call ourselves an agent.",
   ],
@@ -306,20 +311,19 @@ export const rules = {
     "Tell you where it came from: public X posts, read only.",
     "Let you hide someone in one press, and undo anything in one press.",
   ],
-  close: "You need no X password, and we never get write access to your account.",
+  close:
+    "You need no X password, and we never get write access to your account.",
 } as const;
 
 export const follow = {
   id: "follow",
   label: "The accounts you follow",
   h2: "Who have you gone quiet on?",
-  lead:
-    "You pick about a hundred accounts: buyers, people like you, and people your buyers listen to. We watch what they post. The longer you keep the list, the more it knows about who you've shown up for.",
+  lead: "You pick about a hundred accounts: buyers, people like you, and people your buyers listen to. We watch what they post. The longer you keep the list, the more it knows about who you've shown up for.",
   neglect: {
     title: "The quiet list",
     heading: "A CRM tells you who you haven't called. X doesn't. This does.",
-    lead:
-      "For each account we work out three things: when they last posted, when you last saw one of their posts, and when you last replied. Then we sort them.",
+    lead: "For each account we work out when they last posted, when you last saw a post of theirs, and when you last replied. Then we sort them.",
     items: [
       {
         name: "You've gone quiet on them.",
@@ -339,27 +343,25 @@ export const follow = {
   weeklyFive: {
     pro: true,
     title: "Five a week",
-    heading: "Five new accounts a week. At least two from outside your own circle.",
-    body:
-      "Once a week we suggest five accounts to add. At least two have to come from outside the group you already follow. That's a rule, not a setting. A list that only finds people who already talk to each other makes you a local, then makes you invisible.",
-    analogy: "Otherwise you're posting in your own living room while the party is next door.",
-    bar:
-      "Every suggestion has to clear a bar we print on the screen: posted about your topic in the last three weeks, between 1,000 and 2,000,000 followers, and real replies and likes. We only suggest accounts we found posting, so we know they're real. Nothing an AI merely remembers reaches your screen.",
+    heading:
+      "Five new accounts a week. At least two from outside your own circle.",
+    body: "At least two of the five have to come from outside the group you already follow. That's a rule, not a setting. A list of people who all talk to each other makes you a local, then makes you invisible.",
+    analogy:
+      "Otherwise you're posting in your own living room while the party is next door.",
+    bar: "Every suggestion clears a bar we print on the screen: posted on your topic in the last three weeks, 1,000 to 2,000,000 followers, real replies and likes. We only suggest accounts we found posting, so we know they're real.",
     reject: "Say no once, and we never suggest that account again.",
   },
   finding: {
     title: "Adding accounts",
-    body:
-      "Paste them one per line. Or let us search your topics two ways: the most-liked posts, to find who the market is built around, and the newest posts, to find who's talking today. You see the numbers behind each one, and you approve them one at a time.",
+    body: "Paste them one per line. Or let us search your topics two ways: the most-liked posts, to find who the market is built around, and the newest posts, to find who's talking today. You approve them one at a time.",
   },
   channels: {
     pro: true,
     title: "Topic rooms",
     heading: "Join a topic for two weeks.",
-    body:
-      "A topic room is a hand-picked set of accounts and phrases around one subject. Join one and its posts show up on your page, tagged. The join ends by itself after 14 days. Three at a time.",
+    body: "A hand-picked set of accounts and phrases around one subject. Join one and its posts show up on your page, tagged. The join ends by itself after 14 days. Three at a time.",
     analogy:
-      "A topic room never adds anyone to your own list. Your list is your contacts. A room is a conference badge that expires. Leave whenever you like, and anything you saved stays.",
+      "A room never adds anyone to your own list. Your list is your contacts; a room is a conference badge that expires. Leave when you like, and anything you saved stays.",
     roomsLabel: "Rooms open now",
     rooms: [
       "Build in public",
@@ -403,7 +405,7 @@ export const walkthrough = {
     {
       n: "5",
       title: "What they changed.",
-      body: "\"and can share it if useful\" became \"happy to send it over.\" Their words, not ours.",
+      body: '"and can share it if useful" became "happy to send it over." Their words, not ours.',
     },
     {
       n: "6",
@@ -460,8 +462,7 @@ export const audience = {
 export const pricing = {
   id: "pricing",
   h2: "Start free. Pay when ten accounts isn't enough.",
-  lede:
-    "The button works on the free plan, because an empty page doesn't sell anything. The limits show up after it's already worked.",
+  lede: "The button works on the free plan, because an empty page doesn't sell anything. The limits show up after it's already worked.",
   plans: [
     {
       name: "Free",
@@ -475,7 +476,7 @@ export const pricing = {
       price: "$29",
       period: "/mo",
       tagline: "Keep up with everyone you follow.",
-      cta: "Start free",
+      cta: "Start free, upgrade in the app",
     },
   ],
   rows: [

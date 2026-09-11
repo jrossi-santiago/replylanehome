@@ -30,7 +30,9 @@ export function PlainPromise() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <p className="mt-3 font-mono text-[13px] text-ink/55">{promise.caption}</p>
+            <p className="mt-3 font-mono text-[13px] text-ink/55">
+              {promise.caption}
+            </p>
           </div>
         </div>
       </div>

@@ -6,11 +6,17 @@ import { hero, urls } from "@/content/site";
 
 export function Hero() {
   return (
-    <GridBand surface="paper" ruleTop={false} padClass="pb-8 pt-14 md:pb-10 md:pt-20">
+    <GridBand
+      surface="paper"
+      ruleTop={false}
+      padClass="pb-8 pt-14 md:pb-10 md:pt-20"
+    >
       <div className="mx-auto max-w-3xl text-center">
         <p className="mb-5 inline-flex items-center justify-center gap-2">
           <Lamp state="done" surface="light" />
-          <span className="font-mono text-[13px] text-ink/70">{hero.eyebrow}</span>
+          <span className="font-mono text-[13px] text-ink/70">
+            {hero.eyebrow}
+          </span>
         </p>
         <h1 className="type-display text-ink">
           {hero.h1Before}
@@ -25,7 +31,9 @@ export function Hero() {
             {hero.secondary}
           </Button>
         </div>
-        <p className="mt-4 font-body text-[15px] font-medium text-ink">{hero.trust}</p>
+        <p className="mt-4 font-body text-[15px] font-medium text-ink">
+          {hero.trust}
+        </p>
       </div>
       <TweetCard className="mt-12 hero-card-enter hero-card-enter-2 md:mt-14" />
     </GridBand>

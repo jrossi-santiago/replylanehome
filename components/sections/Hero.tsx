@@ -1,6 +1,7 @@
 import { Button } from "@/components/Button";
 import { GridBand } from "@/components/GridBand";
 import { Lamp } from "@/components/Lamp";
+import { TweetCard } from "@/components/TweetCard";
 import { hero, urls } from "@/content/site";
 
 export function Hero() {
@@ -26,6 +27,7 @@ export function Hero() {
         </div>
         <p className="mt-4 font-body text-[15px] font-medium text-ink">{hero.trust}</p>
       </div>
+      <TweetCard className="mt-12 hero-card-enter hero-card-enter-2 md:mt-14" />
     </GridBand>
   );
 }

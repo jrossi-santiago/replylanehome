@@ -1,4 +1,4 @@
-import { ReplyListMock } from "@/components/ReplyListMock";
+import Image from "next/image";
 import { variant } from "@/content/variant";
 
 export function VariantHero() {
@@ -18,11 +18,16 @@ export function VariantHero() {
         </p>
       </div>
 
-      <div className="relative mx-auto w-full max-w-[1080px] px-3 pb-4 md:px-6">
-        <div className="overflow-hidden rounded-t-[28px] bg-[#f3efe4] pt-3 shadow-[0_-12px_48px_rgb(21_15_10/0.08)] md:pt-4">
-          <ReplyListMock
-            lamp="working"
-            className="mx-auto max-w-[920px] rounded-t-2xl rounded-b-none bg-[#efe9d8] md:p-6"
+      <div className="relative mx-auto w-full max-w-[1200px] px-3 pb-4 md:px-6">
+        <div className="overflow-hidden rounded-t-[28px] shadow-[0_-12px_48px_rgb(21_15_10/0.10)]">
+          <Image
+            src="/variant/hero-reply-list.jpg"
+            alt={hero.shotAlt}
+            width={1170}
+            height={881}
+            preload
+            sizes="(max-width: 1200px) 100vw, 1140px"
+            className="h-auto w-full"
           />
         </div>
       </div>

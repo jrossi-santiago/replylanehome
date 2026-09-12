@@ -26,6 +26,8 @@ export const variant = {
     ] as const,
     primary: "Start free",
     trust: "We never post for you. · Free plan · No X password",
+    shotAlt:
+      "The replylane reply list. Posts to reply to, grouped as Asking to buy, People you follow, and Saved.",
   },
   manifesto: {
     id: "why",

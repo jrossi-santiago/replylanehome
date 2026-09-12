@@ -5,29 +5,29 @@ export function VariantCta() {
   const { cta } = variant;
 
   return (
-    <section className="relative overflow-hidden bg-[#f6f3ee] px-4 py-24 md:px-6 md:py-32">
-      <div className="variant-wash-foot pointer-events-none absolute inset-x-0 bottom-0 h-[75%]" />
-      <div className="relative mx-auto max-w-[720px] text-center">
-        <p className="font-head text-[11px] font-semibold uppercase tracking-[0.18em] text-clay">
-          {cta.eyebrow}
-        </p>
-        <h2 className="mt-5 font-serif text-[40px] leading-[1.08] tracking-[-0.03em] text-ink md:text-[64px] md:leading-[1.04]">
-          {cta.h2}
-        </h2>
-        <p className="mx-auto mt-6 max-w-lg font-body text-[17px] leading-[26px] text-ink/60 md:mt-7 md:text-[19px] md:leading-[28px]">
+    <section className="relative overflow-hidden px-4 py-20 md:px-6 md:py-28">
+      <div
+        className="pointer-events-none absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 80% at 50% 100%, rgb(215 108 64 / 0.18), transparent 60%), radial-gradient(ellipse 50% 50% at 80% 0%, rgb(200 171 249 / 0.1), transparent 55%)",
+        }}
+      />
+      <div className="relative mx-auto max-w-[640px] text-center">
+        <h2 className="type-h2 text-paper">{cta.h2}</h2>
+        <p className="mx-auto mt-5 max-w-lg font-body text-[16px] leading-[25px] text-muted md:mt-6 md:text-[18px] md:leading-[28px]">
           {cta.body}
         </p>
-        <div className="mt-10">
-          <a
-            href={urls.signup}
-            className="inline-flex min-h-11 items-center rounded-full bg-clay px-6 font-head text-[15px] font-semibold text-paper no-underline hover:bg-clay/90"
-          >
+        <div className="mx-auto mt-8 max-w-md md:mt-10">
+          <a href={urls.signup} className="btn-primary w-full gap-2">
             {cta.primary}
+            <span aria-hidden="true">→</span>
           </a>
+          <p className="mt-3 font-body text-[13px] text-paper/45 md:text-[14px]">
+            {cta.trust}
+          </p>
         </div>
-        <p className="mt-5 font-body text-[14px] font-medium text-ink/55 md:text-[15px]">
-          {cta.trust}
-        </p>
       </div>
     </section>
   );

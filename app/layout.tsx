@@ -1,29 +1,20 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Instrument_Serif } from "next/font/google";
+import { Bebas_Neue, Open_Sans } from "next/font/google";
 import { meta } from "@/content/site";
 import "./globals.css";
 
-const manrope = localFont({
-  src: "../public/fonts/manrope-variable.woff2",
-  variable: "--font-manrope",
-  weight: "500 800",
-  display: "swap",
-  declarations: [{ prop: "font-style", value: "normal" }],
-});
-
-const inter = localFont({
-  src: "../public/fonts/inter-variable.woff2",
-  variable: "--font-inter",
-  weight: "400 700",
-  display: "swap",
-});
-
-const instrument = Instrument_Serif({
-  subsets: ["latin"],
+const bebas = Bebas_Neue({
   weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-editorial",
+  subsets: ["latin"],
+  variable: "--font-bebas",
+  display: "swap",
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-open-sans",
   display: "swap",
 });
 
@@ -70,12 +61,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${inter.variable} ${plex.variable} ${instrument.variable} h-full antialiased`}
+      className={`${bebas.variable} ${openSans.variable} ${plex.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-snow font-body text-ink">
+      <body className="min-h-full bg-ink font-body text-paper">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-ink focus:px-3 focus:py-2 focus:text-paper"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-paper focus:px-3 focus:py-2 focus:text-ink"
         >
           Skip to content
         </a>

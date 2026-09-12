@@ -31,42 +31,39 @@ export function VariantStory() {
           <p className="text-paper">{story.lead}</p>
           <p>{story.intro}</p>
           <p>
-            {story.problem.split("goldmine of opportunities").map((part, i) =>
-              i === 0 ? (
-                <span key="a">{part}</span>
-              ) : (
-                <span key="b">
-                  <strong className="font-semibold text-paper">
-                    goldmine of opportunities
-                  </strong>
-                  {part}
-                </span>
-              ),
-            )}
+            We learned that the feed is a{" "}
+            <strong className="font-semibold text-paper">
+              goldmine of opportunities
+            </strong>
+            . But most tools just push vanity metrics or auto-replies…
           </p>
           <p className="italic text-paper/55">{story.agitation}</p>
           <p className="pt-2 text-paper">{story.solutionLead}</p>
           <ol className="space-y-4 pt-1">
-            {story.reasons.map((reason, i) => (
-              <li key={reason} className="flex gap-3">
-                <span className="font-head text-[28px] leading-none text-lilac">
-                  {i + 1}.
-                </span>
-                <span>
-                  {reason.includes("asking for what you sell") ? (
-                    <>
-                      Find posts where people are{" "}
-                      <strong className="font-semibold text-paper">
-                        asking for what you sell
-                      </strong>{" "}
-                      — not just talking.
-                    </>
-                  ) : (
-                    reason
-                  )}
-                </span>
-              </li>
-            ))}
+            <li className="flex gap-3">
+              <span className="font-head text-[28px] leading-none text-lilac">
+                1.
+              </span>
+              <span>
+                Find posts where people are{" "}
+                <strong className="font-semibold text-paper">
+                  asking for what you sell
+                </strong>{" "}
+                — not just talking.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="font-head text-[28px] leading-none text-lilac">
+                2.
+              </span>
+              <span>{story.reasons[1]}</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="font-head text-[28px] leading-none text-lilac">
+                3.
+              </span>
+              <span>{story.reasons[2]}</span>
+            </li>
           </ol>
         </div>
       </div>

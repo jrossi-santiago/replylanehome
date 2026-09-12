@@ -1,11 +1,11 @@
-import { Newsreader } from "next/font/google";
+import { Instrument_Serif } from "next/font/google";
 import type { Metadata } from "next";
 import { meta } from "@/content/site";
 
-const newsreader = Newsreader({
+const instrument = Instrument_Serif({
   subsets: ["latin"],
+  weight: "400",
   style: ["normal", "italic"],
-  weight: ["400", "500", "600", "700"],
   variable: "--font-editorial",
   display: "swap",
 });
@@ -17,6 +17,10 @@ export const metadata: Metadata = {
 
 export default function VariantLayout({ children }: LayoutProps<"/v2">) {
   return (
-    <div className={`${newsreader.variable} min-h-full bg-snow`}>{children}</div>
+    <div
+      className={`${instrument.variable} ${instrument.className} min-h-full bg-snow`}
+    >
+      {children}
+    </div>
   );
 }

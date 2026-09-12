@@ -12,7 +12,6 @@
   --font-body: var(--font-inter), system-ui, sans-serif;
   --font-mark: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-plex), ui-monospace, monospace;
-  --font-serif: var(--font-editorial), ui-serif, Georgia, "Iowan Old Style", Palatino, serif;
 }
 
 @layer base {
@@ -78,40 +77,33 @@
   }
 
   .font-serif {
-    font-family: var(--font-serif);
+    font-family: var(--font-editorial), ui-serif, Georgia, "Iowan Old Style", Palatino, serif;
   }
 
   .type-variant-display {
-    font-family: var(--font-serif);
+    font-family: var(--font-editorial), ui-serif, Georgia, "Iowan Old Style", Palatino, serif;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 1.04;
-    letter-spacing: -0.025em;
+    font-size: clamp(36px, 7.2vw, 88px);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
     font-style: normal;
-  }
-
-  @media (min-width: 768px) {
-    .type-variant-display {
-      font-size: 76px;
-      line-height: 0.98;
-    }
   }
 
   .variant-wash {
     background:
       radial-gradient(
-        ellipse 80% 55% at 8% -8%,
-        rgb(215 108 64 / 0.38),
+        ellipse 90% 70% at 6% -12%,
+        rgb(215 108 64 / 0.55),
         transparent 58%
       ),
       radial-gradient(
-        ellipse 70% 50% at 96% 0%,
-        rgb(200 171 249 / 0.32),
-        transparent 52%
+        ellipse 80% 60% at 100% -8%,
+        rgb(200 171 249 / 0.48),
+        transparent 54%
       ),
       radial-gradient(
-        ellipse 50% 40% at 50% 100%,
-        rgb(255 255 255 / 0.9),
+        ellipse 55% 45% at 50% 100%,
+        rgb(255 255 255 / 0.95),
         transparent 70%
       ),
       #ffffff;
@@ -120,14 +112,14 @@
   .variant-wash-foot {
     background:
       radial-gradient(
-        ellipse 70% 80% at 12% 100%,
-        rgb(215 108 64 / 0.22),
-        transparent 60%
+        ellipse 80% 90% at 8% 100%,
+        rgb(215 108 64 / 0.36),
+        transparent 62%
       ),
       radial-gradient(
-        ellipse 60% 70% at 92% 100%,
-        rgb(200 171 249 / 0.18),
-        transparent 55%
+        ellipse 70% 80% at 96% 100%,
+        rgb(200 171 249 / 0.28),
+        transparent 58%
       );
   }
 

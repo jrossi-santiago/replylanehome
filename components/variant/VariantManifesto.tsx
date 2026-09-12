@@ -6,7 +6,7 @@ export function VariantManifesto() {
   return (
     <section
       id={manifesto.id}
-      className="relative scroll-mt-24 bg-snow px-4 py-20 md:px-6 md:py-28"
+      className="relative scroll-mt-24 bg-snow px-4 pb-16 pt-24 md:px-6 md:pb-20 md:pt-32"
     >
       <div className="mx-auto max-w-[720px]">
         <p className="mb-10 text-center font-head text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/45 md:mb-14">

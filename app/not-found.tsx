@@ -28,7 +28,7 @@ export default function NotFound() {
           >
             ⏎
           </span>
-          <span className="font-head text-[28px] leading-none tracking-[0.04em]">
+          <span className="font-head text-[18px] font-extrabold leading-none tracking-[-0.035em]">
             replylane
           </span>
         </Link>

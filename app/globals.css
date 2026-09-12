@@ -11,7 +11,7 @@
   --color-surface-2: #241c14;
   --color-muted: rgb(236 232 218 / 0.62);
   --shadow-card: 0 1px 2px rgb(0 0 0 / 0.2), 0 12px 40px rgb(0 0 0 / 0.35);
-  --font-head: var(--font-bebas), system-ui, sans-serif;
+  --font-head: var(--font-manrope), system-ui, sans-serif;
   --font-body: var(--font-open-sans), system-ui, sans-serif;
   --font-mark: var(--font-open-sans), system-ui, sans-serif;
   --font-mono: var(--font-plex), ui-monospace, monospace;
@@ -61,9 +61,7 @@
   .font-head {
     font-family: var(--font-head);
     font-style: normal;
-    font-weight: 400;
     text-transform: none;
-    letter-spacing: 0.02em;
   }
 
   .font-body {
@@ -80,28 +78,28 @@
 
   .type-display {
     font-family: var(--font-head);
-    font-weight: 400;
-    font-size: clamp(44px, 9vw, 72px);
-    line-height: 0.95;
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    font-size: clamp(36px, 7.5vw, 64px);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
     text-transform: none;
   }
 
   .type-h2 {
     font-family: var(--font-head);
-    font-weight: 400;
-    font-size: clamp(34px, 6vw, 52px);
-    line-height: 1;
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    font-size: clamp(30px, 5.5vw, 48px);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
     text-transform: none;
   }
 
   .type-h3 {
     font-family: var(--font-head);
-    font-weight: 400;
-    font-size: clamp(26px, 4vw, 34px);
-    line-height: 1.05;
-    letter-spacing: 0.02em;
+    font-weight: 650;
+    font-size: clamp(22px, 3.5vw, 30px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
     text-transform: none;
   }
 

@@ -29,11 +29,11 @@ export function VariantHow() {
                   className="h-auto w-full"
                 />
               </div>
-              <div className="px-5 py-6 text-left md:px-7 md:py-7">
+              <div className="px-5 py-7 text-left md:px-7 md:py-8">
                 <h3 className="type-h3 text-paper">
                   {step.n}. {step.h3}
                 </h3>
-                <p className="mt-3 font-body text-[15px] leading-[24px] text-muted md:text-[16px] md:leading-[25px]">
+                <p className="mt-4 font-body text-[15px] leading-[24px] text-muted md:text-[16px] md:leading-[25px]">
                   {step.body}
                 </p>
               </div>
@@ -41,7 +41,7 @@ export function VariantHow() {
 
             {i < how.steps.length - 1 ? (
               <p
-                className="py-4 font-body text-[22px] text-paper/35"
+                className="py-6 font-body text-[22px] text-paper/35"
                 aria-hidden="true"
               >
                 ↓

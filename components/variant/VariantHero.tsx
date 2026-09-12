@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { urls } from "@/content/site";
 import { variant } from "@/content/variant";
 
 export function VariantHero() {
@@ -16,6 +17,14 @@ export function VariantHero() {
           <span className="block">{hero.subLines[0]}</span>
           <span className="block">{hero.subLines[1]}</span>
         </p>
+        <div className="mt-8">
+          <a
+            href={urls.signup}
+            className="inline-flex min-h-11 items-center rounded-full bg-clay px-6 font-head text-[15px] font-semibold text-paper no-underline hover:bg-clay/90"
+          >
+            {hero.primary}
+          </a>
+        </div>
       </div>
 
       <div className="relative mx-auto w-full max-w-[1200px] px-3 pb-4 md:px-6">

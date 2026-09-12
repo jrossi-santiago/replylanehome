@@ -24,7 +24,7 @@ export const variant = {
       "Every sale starts with a conversation.",
       "We find new audiences already active on X.",
     ] as const,
-    primary: "Start free",
+    primary: "Start Now for Free",
     trust: "We never post for you. · Free plan · No X password",
     shotAlt:
       "The replylane reply list. Posts to reply to, grouped as Asking to buy, People you follow, and Saved.",

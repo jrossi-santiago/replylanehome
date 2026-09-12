@@ -77,7 +77,7 @@ export function VariantPricing() {
               {plan.name}
             </p>
             <p className="mt-3 flex items-baseline gap-1">
-              <span className="font-head text-[64px] leading-none tracking-[0.02em] text-paper">
+              <span className="font-head text-[56px] font-extrabold leading-none tracking-[-0.04em] text-paper">
                 {plan.price}
               </span>
               {plan.period ? (

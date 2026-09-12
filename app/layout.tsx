@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Bebas_Neue, Open_Sans } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import { meta } from "@/content/site";
 import "./globals.css";
 
-const bebas = Bebas_Neue({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-bebas",
+const manrope = localFont({
+  src: "../public/fonts/manrope-variable.woff2",
+  variable: "--font-manrope",
+  weight: "500 800",
   display: "swap",
+  declarations: [{ prop: "font-style", value: "normal" }],
 });
 
 const openSans = Open_Sans({
@@ -61,7 +62,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${bebas.variable} ${openSans.variable} ${plex.variable} h-full antialiased`}
+      className={`${manrope.variable} ${openSans.variable} ${plex.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-ink font-body text-paper">
         <a

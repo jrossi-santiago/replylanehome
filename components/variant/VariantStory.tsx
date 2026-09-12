@@ -41,7 +41,7 @@ export function VariantStory() {
           <p className="pt-2 text-paper">{story.solutionLead}</p>
           <ol className="space-y-4 pt-1">
             <li className="flex gap-3">
-              <span className="font-head text-[28px] leading-none text-lilac">
+              <span className="font-head text-[28px] font-bold leading-none text-lilac">
                 1.
               </span>
               <span>
@@ -53,13 +53,13 @@ export function VariantStory() {
               </span>
             </li>
             <li className="flex gap-3">
-              <span className="font-head text-[28px] leading-none text-lilac">
+              <span className="font-head text-[28px] font-bold leading-none text-lilac">
                 2.
               </span>
               <span>{story.reasons[1]}</span>
             </li>
             <li className="flex gap-3">
-              <span className="font-head text-[28px] leading-none text-lilac">
+              <span className="font-head text-[28px] font-bold leading-none text-lilac">
                 3.
               </span>
               <span>{story.reasons[2]}</span>

@@ -17,7 +17,7 @@ export function VariantHero() {
       />
 
       <div className="relative page-container pb-10 pt-14 text-center md:pb-14 md:pt-20">
-        <p className="hero-rise hero-rise-1 font-head text-[42px] leading-none tracking-[0.06em] text-paper md:text-[52px]">
+        <p className="hero-rise hero-rise-1 font-head text-[36px] font-extrabold leading-none tracking-[-0.035em] text-paper md:text-[48px]">
           {hero.brand}
         </p>
         <h1 className="hero-rise hero-rise-2 type-display mt-5 text-paper md:mt-6">

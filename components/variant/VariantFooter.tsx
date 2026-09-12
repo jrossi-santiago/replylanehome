@@ -17,7 +17,7 @@ export function VariantFooter() {
           >
             ⏎
           </span>
-          <span className="font-head text-[24px] leading-none tracking-[0.04em]">
+          <span className="font-head text-[16px] font-extrabold leading-none tracking-[-0.035em]">
             replylane
           </span>
         </Link>

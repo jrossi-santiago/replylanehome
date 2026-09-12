@@ -1,10 +1,8 @@
 import { urls } from "./site";
 
-/** Copy for the /v2 homepage variant. Manifesto body is draft layout copy. */
+/** Copy for the homepage. Manifesto body is draft layout copy. */
 export const variant = {
-  path: "/v2",
-  originalPath: "/",
-  originalLabel: "Original homepage",
+  path: "/",
   nav: {
     links: [
       { label: "What", href: "#what", dot: "#e25d4a" },

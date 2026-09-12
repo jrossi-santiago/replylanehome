@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Instrument_Serif } from "next/font/google";
 import { meta } from "@/content/site";
 import "./globals.css";
 
@@ -15,6 +16,14 @@ const inter = localFont({
   src: "../public/fonts/inter-variable.woff2",
   variable: "--font-inter",
   weight: "400 700",
+  display: "swap",
+});
+
+const instrument = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-editorial",
   display: "swap",
 });
 
@@ -61,7 +70,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${inter.variable} ${plex.variable} h-full antialiased`}
+      className={`${manrope.variable} ${inter.variable} ${plex.variable} ${instrument.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-paper font-body text-ink">
         <a

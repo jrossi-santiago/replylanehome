@@ -84,7 +84,7 @@ export const variant = {
         eyebrow: "Step 03",
         h3: "Write the reply.",
         body: "On Pro, a first draft is waiting. Change what you want, copy it, open the post on X, and send it yourself.",
-        shot: "/variant/how-draft-mock.png",
+        shot: "/variant/how-draft-copy.png",
         shotAlt:
           "Draft panel with a post, a reply draft, and character count.",
         tags: ["your voice", "you hit send"] as const,

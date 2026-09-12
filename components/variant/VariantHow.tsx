@@ -1,69 +1,68 @@
 import Image from "next/image";
+import { urls } from "@/content/site";
 import { variant } from "@/content/variant";
 
 export function VariantHow() {
   const { how } = variant;
 
   return (
-    <section
-      id={how.id}
-      className="relative scroll-mt-24 bg-snow px-4 pb-8 pt-24 md:px-6 md:pb-12 md:pt-32"
-    >
+    <section id={how.id} className="relative scroll-mt-24 px-4 py-20 md:px-6 md:py-28">
       <div className="mx-auto max-w-[720px] text-center">
-        <p className="font-head text-[11px] font-semibold uppercase tracking-[0.18em] text-clay">
-          {how.eyebrow}
-        </p>
-        <h2 className="type-variant-display mt-5 text-ink md:mt-6">
-          {how.h2}
-        </h2>
-        <p className="mx-auto mt-6 max-w-xl font-body text-[17px] leading-[26px] text-ink/60 md:mt-7 md:text-[19px] md:leading-[28px]">
-          {how.lead}
-        </p>
+        <p className="type-eyebrow">{how.eyebrow}</p>
+        <h2 className="type-h2 mt-4 text-paper md:mt-5">{how.h2}</h2>
       </div>
 
-      <div className="mx-auto mt-16 max-w-[920px] space-y-24 md:mt-24 md:space-y-32">
+      <div className="mx-auto mt-12 flex max-w-[640px] flex-col items-center md:mt-16">
         {how.steps.map((step, i) => (
-          <article
-            key={step.eyebrow}
-            className="variant-step"
-            style={{ animationDelay: `${i * 40}ms` }}
-          >
-            <div className="mx-auto max-w-[640px] text-center">
-              <p className="font-head text-[11px] font-semibold uppercase tracking-[0.18em] text-clay">
-                {step.eyebrow}
-              </p>
-              <h3 className="mt-4 font-serif text-[32px] leading-[1.15] tracking-[-0.02em] text-ink md:text-[44px] md:leading-[1.1]">
-                {step.h3}
-              </h3>
-              <p className="mx-auto mt-5 max-w-lg font-body text-[16px] leading-[25px] text-ink/60 md:text-[17px] md:leading-[26px]">
-                {step.body}
-              </p>
-            </div>
-
-            <div className="relative mx-auto mt-10 max-w-[760px] md:mt-12">
-              <div className="overflow-hidden rounded-[28px] bg-[#f3f1ec] shadow-[0_20px_60px_rgb(21_15_10/0.08)]">
+          <div key={step.n} className="flex w-full flex-col items-center">
+            <article
+              className="step-in surface-card w-full overflow-hidden"
+              style={{ animationDelay: `${i * 80}ms` }}
+            >
+              <div className="overflow-hidden bg-surface-2">
                 <Image
                   src={step.shot}
                   alt={step.shotAlt}
                   width={1200}
                   height={900}
-                  sizes="(max-width: 760px) 100vw, 760px"
+                  sizes="(max-width: 640px) 100vw, 640px"
                   className="h-auto w-full"
                 />
               </div>
-              <ul className="mt-5 flex flex-wrap justify-center gap-2 md:mt-6 md:gap-3">
-                {step.tags.map((tag) => (
-                  <li
-                    key={tag}
-                    className="rounded-full border border-ink/10 bg-snow px-3.5 py-1.5 font-body text-[12px] font-medium text-ink/70 md:text-[13px]"
-                  >
-                    {tag}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </article>
+              <div className="px-5 py-7 text-left md:px-7 md:py-8">
+                <h3 className="type-h3 text-paper">
+                  {step.n}. {step.h3}
+                </h3>
+                <p className="mt-4 font-body text-[15px] leading-[24px] text-muted md:text-[16px] md:leading-[25px]">
+                  {step.body}
+                </p>
+              </div>
+            </article>
+
+            {i < how.steps.length - 1 ? (
+              <p
+                className="py-6 font-body text-[22px] text-paper/35"
+                aria-hidden="true"
+              >
+                ↓
+              </p>
+            ) : null}
+          </div>
         ))}
+
+        <p className="py-4 font-body text-[22px] text-paper/35" aria-hidden="true">
+          ↓
+        </p>
+
+        <div className="w-full max-w-md text-center">
+          <a href={urls.signup} className="btn-primary w-full gap-2">
+            {how.midCta.primary}
+            <span aria-hidden="true">→</span>
+          </a>
+          <p className="mt-3 font-body text-[13px] text-paper/45">
+            {how.midCta.trust}
+          </p>
+        </div>
       </div>
     </section>
   );

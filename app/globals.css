@@ -76,6 +76,53 @@
     font-family: var(--font-mono);
   }
 
+  .font-serif {
+    font-family: var(--font-editorial), ui-serif, Georgia, "Iowan Old Style", Palatino, serif;
+  }
+
+  .type-variant-display {
+    font-family: var(--font-editorial), ui-serif, Georgia, "Iowan Old Style", Palatino, serif;
+    font-weight: 400;
+    font-size: clamp(36px, 7.2vw, 88px);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    font-style: normal;
+  }
+
+  .variant-wash {
+    background:
+      radial-gradient(
+        ellipse 90% 70% at 6% -12%,
+        rgb(215 108 64 / 0.55),
+        transparent 58%
+      ),
+      radial-gradient(
+        ellipse 80% 60% at 100% -8%,
+        rgb(200 171 249 / 0.48),
+        transparent 54%
+      ),
+      radial-gradient(
+        ellipse 55% 45% at 50% 100%,
+        rgb(255 255 255 / 0.95),
+        transparent 70%
+      ),
+      #ffffff;
+  }
+
+  .variant-wash-foot {
+    background:
+      radial-gradient(
+        ellipse 80% 90% at 8% 100%,
+        rgb(215 108 64 / 0.36),
+        transparent 62%
+      ),
+      radial-gradient(
+        ellipse 70% 80% at 96% 100%,
+        rgb(200 171 249 / 0.28),
+        transparent 58%
+      );
+  }
+
   .type-display {
     font-family: var(--font-head);
     font-weight: 600;

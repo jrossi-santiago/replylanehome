@@ -1,45 +1,36 @@
-import { Nav } from "@/components/Nav";
-import { Audience } from "@/components/sections/Audience";
-import { Desk } from "@/components/sections/Desk";
+import { Instrument_Serif } from "next/font/google";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
-import { Follow } from "@/components/sections/Follow";
 import { Footer } from "@/components/sections/Footer";
-import { Frames } from "@/components/sections/Frames";
-import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Lists } from "@/components/sections/Lists";
 import { Pricing } from "@/components/sections/Pricing";
-import { PlainPromise } from "@/components/sections/Promise";
-import { RulesBand } from "@/components/sections/RulesBand";
-import { Story } from "@/components/sections/Story";
-import { TheDraft } from "@/components/sections/TheDraft";
-import { Walkthrough } from "@/components/sections/Walkthrough";
-import { WhyOnDesk } from "@/components/sections/WhyOnDesk";
+import { VariantAnti } from "@/components/variant/VariantAnti";
+import { VariantHero } from "@/components/variant/VariantHero";
+import { VariantManifesto } from "@/components/variant/VariantManifesto";
+import { VariantNav } from "@/components/variant/VariantNav";
+
+const instrument = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-editorial",
+  display: "swap",
+});
 
 export default function HomePage() {
   return (
-    <>
-      <Nav />
+    <div className={`${instrument.className} min-h-full bg-snow`}>
+      <VariantNav />
       <main id="main">
-        <Hero />
-        <PlainPromise />
-        <Story />
-        <Lists />
-        <Desk />
+        <VariantHero />
+        <VariantManifesto />
+        <VariantAnti />
         <HowItWorks />
-        <WhyOnDesk />
-        <TheDraft />
-        <RulesBand />
-        <Follow />
-        <Frames />
-        <Walkthrough />
-        <Audience />
         <Pricing />
         <Faq />
         <FinalCta />
       </main>
-      <Footer compareHref="/v2" compareLabel="Layout variant" />
-    </>
+      <Footer />
+    </div>
   );
 }

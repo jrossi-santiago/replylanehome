@@ -72,7 +72,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${manrope.variable} ${inter.variable} ${plex.variable} ${instrument.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-paper font-body text-ink">
+      <body className="min-h-full bg-snow font-body text-ink">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-ink focus:px-3 focus:py-2 focus:text-paper"

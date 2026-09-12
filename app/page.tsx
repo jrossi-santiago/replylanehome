@@ -1,13 +1,14 @@
 import { Instrument_Serif } from "next/font/google";
-import { Faq } from "@/components/sections/Faq";
-import { FinalCta } from "@/components/sections/FinalCta";
-import { Footer } from "@/components/sections/Footer";
-import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Pricing } from "@/components/sections/Pricing";
 import { VariantAnti } from "@/components/variant/VariantAnti";
+import { VariantBand } from "@/components/variant/VariantBand";
+import { VariantCta } from "@/components/variant/VariantCta";
+import { VariantFaq } from "@/components/variant/VariantFaq";
+import { VariantFooter } from "@/components/variant/VariantFooter";
 import { VariantHero } from "@/components/variant/VariantHero";
+import { VariantHow } from "@/components/variant/VariantHow";
 import { VariantManifesto } from "@/components/variant/VariantManifesto";
 import { VariantNav } from "@/components/variant/VariantNav";
+import { VariantPricing } from "@/components/variant/VariantPricing";
 
 const instrument = Instrument_Serif({
   subsets: ["latin"],
@@ -25,12 +26,13 @@ export default function HomePage() {
         <VariantHero />
         <VariantManifesto />
         <VariantAnti />
-        <HowItWorks />
-        <Pricing />
-        <Faq />
-        <FinalCta />
+        <VariantHow />
+        <VariantBand />
+        <VariantPricing />
+        <VariantFaq />
+        <VariantCta />
       </main>
-      <Footer />
+      <VariantFooter />
     </div>
   );
 }

@@ -39,7 +39,7 @@ export default function HomePage() {
         <Faq />
         <FinalCta />
       </main>
-      <Footer />
+      <Footer compareHref="/v2" compareLabel="Layout variant" />
     </>
   );
 }

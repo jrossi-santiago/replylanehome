@@ -12,6 +12,7 @@
   --font-body: var(--font-inter), system-ui, sans-serif;
   --font-mark: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-plex), ui-monospace, monospace;
+  --font-serif: var(--font-editorial), ui-serif, Georgia, "Iowan Old Style", Palatino, serif;
 }
 
 @layer base {
@@ -74,6 +75,60 @@
 
   .font-mono {
     font-family: var(--font-mono);
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .type-variant-display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    font-style: normal;
+  }
+
+  @media (min-width: 768px) {
+    .type-variant-display {
+      font-size: 76px;
+      line-height: 0.98;
+    }
+  }
+
+  .variant-wash {
+    background:
+      radial-gradient(
+        ellipse 80% 55% at 8% -8%,
+        rgb(215 108 64 / 0.38),
+        transparent 58%
+      ),
+      radial-gradient(
+        ellipse 70% 50% at 96% 0%,
+        rgb(200 171 249 / 0.32),
+        transparent 52%
+      ),
+      radial-gradient(
+        ellipse 50% 40% at 50% 100%,
+        rgb(255 255 255 / 0.9),
+        transparent 70%
+      ),
+      #ffffff;
+  }
+
+  .variant-wash-foot {
+    background:
+      radial-gradient(
+        ellipse 70% 80% at 12% 100%,
+        rgb(215 108 64 / 0.22),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 60% 70% at 92% 100%,
+        rgb(200 171 249 / 0.18),
+        transparent 55%
+      );
   }
 
   .type-display {
